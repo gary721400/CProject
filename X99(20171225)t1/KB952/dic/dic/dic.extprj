@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<assembly_include_path value="NULL"/>
+	<auto_refresh_memory value="true"/>
+	<auto_refresh_register value="true"/>
+	<comply_ansi value="true"/>
+	<default-lib-dirs value="true"/>
+	<default-libs value="true"/>
+	<dump_memory_map value="true"/>
+	<encryption value="true"/>
+	<exception_vector value="0x010030"/>
+	<export_symbol value="false"/>
+	<external_download_config VIRTUAL_SPACE="SRAM"/>
+	<include_path value="%KBDMIDS%\include\SPIBOOT_KBDM9;..\..\..\FW;..\..\..\FW\sio;..\..\..\FW\conf;..\..\..\FW\drivers\oid;..\..\..\FW\Include;..\..\..\FW\Include\SDBOOT_KBDM9;..\..\..\FW\lib_mcu;..\..\..\FW\lib_mcu\int;..\..\..\FW\lib_mcu\kbd;..\..\..\FW\lib_mcu\timer;..\..\..\FW\lib_system\mailbox;..\..\..\FW\lib_system\timer_soft;..\..\..\FW\lib_system\unicode;..\..\..\FW\Library;..\..\..\FW\mmi\dictionary;..\..\..\FW\mmi\kbd;..\..\..\FW\mmi\player;..\..\..\FW\mmi\shared;..\..\..\FW\mmi\status;..\..\..\FW\modules\audio;..\..\..\FW\modules\file_system;..\..\..\FW\modules\mmi_manager;..\..\..\FW\modules\player;..\..\..\FW\modules\player_ap3;..\..\..\FW\modules\power;..\..\..\FW\modules\search;..\..\..\FW\modules\text;..\..\..\FW\modules\usb;..\..\..\KB952;fw\conf;fw\modules\scheduler;..\..\..\FW\modules\recorder"/>
+	<internal_download_config INTERNAL_IPs="Download"/>
+	<is_generate_debugging_info value="false"/>
+	<libraries value="NULL"/>
+	<library_path value="%KBDMIDS%\lib\SPIBOOT_KBDM9;%KBDMIDS%\lib"/>
+	<linker_control_file value="dic.lcf"/>
+	<macro_file value="NULL"/>
+	<norflash_op_timeout value="30 sec"/>
+	<output-list value="false"/>
+	<output_path value="output"/>
+	<project_files value="..\..\..\FW\drivers\lcd\lcd_SSD1303.c;..\..\..\FW\drivers\mmi\img_handler.c;..\..\..\FW\lib_mcu\kbd\keypad_drv.c;..\..\..\FW\lib_mcu\lcd\lcd_drv.c;..\..\..\FW\lib_mcu\timer\timer_drv.c;..\..\..\FW\lib_system\auto_disp\auto_disp.c;..\..\..\FW\lib_system\mailbox\mail.c;..\..\..\FW\lib_system\timer_soft\timer_soft.c;..\..\..\FW\lib_system\unicode\unicode.c;..\..\..\FW\Library\ADC.asm;..\..\..\FW\Library\AudioMP3API.C;..\..\..\FW\Library\MP3v2_API.lib;..\..\..\FW\Library\Source\Code\AudioMP3Stop.C;..\..\..\FW\mmi\dictionary\mmi_dictionary.c;..\..\..\FW\mmi\kbd\keypad.c;..\..\..\FW\mmi\player\srv_player.c;..\..\..\FW\mmi\shared\com_var.c;..\..\..\FW\modules\audio\audio.c;..\..\..\FW\modules\file_system\file.c;..\..\..\FW\modules\file_system\FS_patch.c;..\..\..\FW\modules\file_system\navigation.c;..\..\..\FW\modules\player\DAC_MuteUnmute2.asm;..\..\..\FW\modules\player\DAC_S2M.asm;..\..\..\FW\modules\player\mp3PlayFAT.asm;..\..\..\FW\modules\player\player.c;..\..\..\FW\modules\power\power.c;..\..\..\FW\modules\power\power_task.c;..\..\..\FW\modules\text\text.c;..\..\..\FW\modules\text\text_base.c;..\..\..\FW\modules\text\text_remote.c;..\..\..\FW\modules\text\text_task.c;..\..\..\FW\modules\text\text_viewer.c;..\..\..\FW\sdtl_munt.c;..\..\..\FW\sio\com.c;..\..\..\FW\Variable.c;fw\dic_main.c;fw\drivers\oid\dic_oid.c;fw\mmi\shared\dic_com_appli.c;fw\mmi\status\dic_mmi_status.c;fw\modules\mmi_manager\dic_mmgr_kernel.c;fw\modules\player\dic_player_task.c;fw\modules\player_ap3\dic_player_ap3.c;fw\modules\scheduler\dic_scheduler.c"/>
+	<project_id value="863002975"/>
+	<reset_2_entry value="true"/>
+	<reset_timeout value="5000"/>
+	<step_timeout value="3000"/>
+	<stop_on_exception value="true"/>
+	<target_body value="SPIBOOT_KBDM9"/>
+	<trace_files value="NULL"/>
+	<triger_timeout_message value="true"/>
+	<version value="KBDMIDS 00.01"/>
+	<watch_expressions value="g_b_earphone_present:0;wr:0;id:4;task_id:0;s_mailbox_cmd:4;s_mailboxdesc_cmd:4;volume_right:0;srvplayer_g_arg:0;g_u8_player_volume_l:0;lFileMax:0;longFileName:4;tisiFileShortpath:2;fat_g_cur_nav:4;g_b_unicode:0;error:0;adb_file_number:0;current_adb_file_number:0;g_string:4;dictext_g_state:0;exit_dictext_to_appli:0;g_b_dic_on:0;g_select_appli:0"/>
+</project>

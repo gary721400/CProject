@@ -1,0 +1,6 @@
+---- REREAD_MODE Matches (5 in 3 files) ----
+Conf_sio.h (fw\conf)://#define				REREAD_MODE             				( DISABLE )
+Conf_sio.h (fw\conf):#define 			REREAD_MODE             				( ENABLE )
+Dic_oid.c (kb952\dic\dic\fw\drivers\oid):#if 0//(REREAD_MODE == ENABLE)
+Dic_player_task.c (kb952\dic\dic\fw\modules\player):#if 0// (REREAD_MODE == ENABLE)   
+Dic_player_task.c (kb952\dic\dic\fw\modules\player):#endif    //(REREAD_MODE == ENABLE)

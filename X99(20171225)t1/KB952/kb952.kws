@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<MasterProject value="startup\startup\startup.extprj"/>
+	<projects value="ap4\ap4\ap4.extprj;dic\dic\dic.extprj;hid\usbhid\usbhid.extprj;idle\idle\idle.extprj;play\play\play.extprj;poweroff\poweroff\poweroff.extprj;recorder\recorder\recorder.extprj;reread\reread\reread.extprj;setting\setting\setting.extprj;startup\boot\boot.extprj;startup\startup\startup.extprj;study\study\study.extprj;update\update\update.extprj;UpgBurnSPI\UpgBurnSPI.extprj;usb\usb\usb.extprj;USB_MassStorage_Project\Usb_Hid.extprj;wireless\wireless\wireless.extprj"/>
+	<projects_id value="ap4\ap4\ap4.extprj=0x6F6D5C57;dic\dic\dic.extprj=0x3370615F;hid\usbhid\usbhid.extprj=0x75746174;idle\idle\idle.extprj=0x75746174;play\play\play.extprj=0x75006273;poweroff\poweroff\poweroff.extprj=0x75746174;recorder\recorder\recorder.extprj=0x2E2E5C2E;reread\reread\reread.extprj=0x5C2E2E5C;setting\setting\setting.extprj=0x2E3B7075;startup\boot\boot.extprj=0x75746174;startup\startup\startup.extprj=0x64726F63;study\study\study.extprj=0x5C57465C;update\update\update.extprj=0x75746174;UpgBurnSPI\UpgBurnSPI.extprj=0x1EA5A70E;usb\usb\usb.extprj=0x75746174;USB_MassStorage_Project\Usb_Hid.extprj=0x415C2E2E;wireless\wireless\wireless.extprj=0x75746174"/>
+	<version value="KBDMIDS 1.2"/>
+</project>

@@ -1,0 +1,649 @@
+space
+{
+	XRAM 0x0 0x7000
+	{
+		//SPACE_XRAM 0x0 0x7000 : stack 0x100 0xEF0 ; 
+		SPACE_XRAM 0x0 0x7000 : stack 0x0 0x800 ; 
+		
+		SDTL_XRAM = SPACE_XRAM;
+		DAC_XRAM = SPACE_XRAM;
+		SPIF_XRAM = SPACE_XRAM;
+		SPIF_Catch = SPACE_XRAM;
+		
+		MMGR_KERNEL_DATA = SPACE_XRAM;
+		KEYPAD_DATA = SPACE_XRAM;
+		POWER_DATA = SPACE_XRAM;
+		POWER_TASK_DATA = SPACE_XRAM;
+		TIMER_SOFT_DATA = SPACE_XRAM;
+		OID_DATA = SPACE_XRAM;
+		ADC_DATA = SPACE_XRAM;
+		ADC_MAIN_DATA = SPACE_XRAM;
+		PLAYER_TASK_DATA = SPACE_XRAM;
+		KEYPAD_DRV_DATA = SPACE_XRAM;
+		READ_OID_SOUND_DATA = SPACE_XRAM;
+		MP3_API_XRAM = SPACE_XRAM;
+		COM_VAR_DATA = SPACE_XRAM;
+		
+		//file system
+		FILE_DATA = SPACE_XRAM;
+		FS_PATCH_DATA = SPACE_XRAM;
+		NAVIGATION_DATA = SPACE_XRAM;
+		
+		FS_DATA = SPACE_XRAM;
+		FSSD_DRIVER_DATA = SPACE_XRAM;
+		SDTL_CACHE_DATA = SPACE_XRAM;
+		
+		BITSTREAM_BUF_CIRC_XRAM = SPACE_XRAM;
+		CATCH_BUF_CIRC_XRAM = SPACE_XRAM;
+		USART_DATA = SPACE_XRAM;
+		PLAYER_DATA = SPACE_XRAM;
+		
+		//wav
+		ADPCM_XRAM = SPACE_XRAM;
+		AUADC_XRAM = SPACE_XRAM;
+		AGC_XRAM = SPACE_XRAM;
+
+		MMI_AP4_DATA            = SPACE_XRAM;
+		SEARCH_DATA             = SPACE_XRAM;
+		SEARCH_TASK_DATA        = SPACE_XRAM;
+		SEARCH_GAME_DATA        = SPACE_XRAM;
+		SEARCH_REMOTE_DATA      = SPACE_XRAM;
+		
+		//recorder
+		RECORDER_DATA = SPACE_XRAM;
+		RECORDER_TASK_DATA = SPACE_XRAM;
+		KB_RESIZE_DATA = SPACE_XRAM;
+		
+		LCD_SSD1303_DATA = SPACE_XRAM;
+		IMG_HANDLER_DATA = SPACE_XRAM;
+		UNICODE_DATA = SPACE_XRAM;
+		
+		MMI_STATUS_DATA = SPACE_XRAM;
+		
+		AUTO_DISP_DATA = SPACE_XRAM;
+	}
+	YRAM 0x8000 0x3000
+	{
+		SPACE_YRAM 0x0 0x3000 ;
+	}
+	SFR 0xF100 0xF00
+	{
+		SPACE_SFR 0x0 0xF00 ;
+	}
+	DPRAM 0xF200 0xA
+	{
+		SPACE_DPRAM 0x0 0xA ;
+		
+		DAC_DPRAM = SPACE_DPRAM;
+		AUADC_DPRAM = SPACE_DPRAM;
+	}
+	IROM 0x30000 0x10000
+	{
+		SPACE_ROM 0x0 0x10000 ;
+	}
+	IRAM 0x10000 0xD000
+	{
+		SPACE_IRAM 0x0 0x8480 : interrupt 0x0 0x100 ,image ; 
+		
+		MAIN_CODE = SPACE_IRAM;
+		
+		USART_CODE = SPACE_IRAM;
+		
+		SCHEDULER_CODE = SPACE_IRAM;
+		MMGR_KERNEL_CODE = SPACE_IRAM;
+		KEYPAD_CODE = SPACE_IRAM;
+		POWER_CODE = SPACE_IRAM;
+		POWER_TASK_CODE = SPACE_IRAM;
+		MAIL_CODE = SPACE_IRAM;
+		TIMER_DRV_CODE = SPACE_IRAM;
+		TIMER_SOFT_CODE = SPACE_IRAM;
+		COM_APPLI_CODE = SPACE_IRAM;
+		MMI_STATUS_CODE = SPACE_IRAM;
+		OID_CODE = SPACE_IRAM;
+		KEYPAD_DRV_CODE = SPACE_IRAM;
+		ADC_MAIN_CODE = SPACE_IRAM;
+		COM_VAR_CODE = SPACE_IRAM;
+		PLAYER_TASK_CODE = SPACE_IRAM;
+		
+		//DAC_COMMON_CODE = SPACE_IRAM;
+		//MP3_COMMON_CODE = SPACE_IRAM;
+		//READ_OID_SOUND_CODE = SPACE_IRAM;
+		
+		FS_PATCH_CODE      = SPACE_IRAM;
+		FAT_COMMON_CODE    = SPACE_IRAM;
+		
+		//NAVIGATION_TEMP_CODE00 = SPACE_IRAM;
+		//NAVIGATION_TEMP_CODE01 = SPACE_IRAM;
+		//NAVIGATION_TEMP_CODE02 = SPACE_IRAM;
+		//NAVIGATION_TEMP_CODE03 = SPACE_IRAM;
+		//NAVIGATION_TEMP_CODE04 = SPACE_IRAM;
+		//NAVIGATION_TEMP_CODE05 = SPACE_IRAM;
+		FILE_CODE = SPACE_IRAM;
+		//FILE_TEMP_CODE00 = SPACE_IRAM;
+		//FILE_TEMP_CODE01 = SPACE_IRAM;
+		
+		FSSD_INIT_CODE    = SPACE_IRAM;
+		FSSD_DRIVER_CODE  = SPACE_IRAM;
+		
+		PLAYER_CODE = SPACE_IRAM;
+		AUDIO_CODE = SPACE_IRAM;
+		
+		//recorder
+		RECORDER_CODE = SPACE_IRAM;
+		RECORDER_TASK_CODE = SPACE_IRAM;
+		//AGC_Init_Code = SPACE_IRAM;
+		//AGC_Code = SPACE_IRAM;
+		
+		//wav
+		IMA_Table = SPACE_IRAM;
+		IMA_Encode_Code = SPACE_IRAM;
+		IMA_Decode_Code = SPACE_IRAM;
+		
+		MMI_AP4_CODE       = SPACE_IRAM;
+		SEARCH_CODE        = SPACE_IRAM;
+		SEARCH_TASK_CODE   = SPACE_IRAM;
+		//SEARCH_GAME_CODE   = SPACE_IRAM;
+		SEARCH_REMOTE_CODE = SPACE_IRAM;
+		PLAYER_AP3_CODE    = SPACE_IRAM;
+
+    	LCD_SSD1303_CODE = SPACE_IRAM;
+		IMG_HANDLER_CODE = SPACE_IRAM;
+		UNICODE_CODE = SPACE_IRAM;
+		
+		AUTO_DISP_CODE = SPACE_IRAM;
+		
+		SRV_PLAYER_CODE = SPACE_IRAM;
+		SRV_RECORDER_CODE = SPACE_IRAM;
+		
+		SYSDRV_CODE = SPACE_IRAM;
+		SDTL_CODE = SPACE_IRAM;
+		SPIF_CODE = SPACE_IRAM;
+		LIBC = SPACE_IRAM;
+		KBDMCC = SPACE_IRAM;
+		//LIBM = SPACE_IRAM;
+		
+		KEYPAD_PROCESS_CODE = SPACE_IRAM;
+    TIMER_SOFT_PROCESS_CODE = SPACE_IRAM;
+    //MMGR_KERNEL_TEMP_CODE00 = SPACE_IRAM;
+    
+    //POWER_TASK_TEMP_CODE00 = SPACE_IRAM;
+    //POWER_TASK_TEMP_CODE01 = SPACE_IRAM;
+    //POWER_TASK_TEMP_CODE02 = SPACE_IRAM;
+    //POWER_TASK_TEMP_CODE03 = SPACE_IRAM;
+    //POWER_TASK_TEMP_CODE04 = SPACE_IRAM;
+    //POWER_TASK_TEMP_CODE05 = SPACE_IRAM;
+
+    	KEYPAD_DRV_V1_CODE					   0x8480 0x0180 : image ,adhereto VIRTUAL_SPACE;
+		KEYPAD_DRV_V2_CODE					   0x8480 0x0180 : image ,adhereto VIRTUAL_SPACE;
+
+		LCD_COMMAND_CODE					  0x8480 0x0380 : image ,adhereto VIRTUAL_SPACE; //写8位高字符
+		//UNICODE_TEMP_CODE(00 02)            0x8430 0x0400 : image ,adhereto VIRTUAL_SPACE;
+		UNICODE_TEMP_CODE03                   0x8480 0x0380 : image ,adhereto VIRTUAL_SPACE;
+    	
+		LCD_HEIGH8_CODE						  0x8830 0x04D0 : image ,adhereto VIRTUAL_SPACE; //写8位高字符
+		LCD_SSD1303_TEMP_CODE02               0x8830 0x04D0 : image ,adhereto VIRTUAL_SPACE; //清屏
+		LCD_PICTURE_CODE					  0x8830 0x0300 : image ,adhereto VIRTUAL_SPACE;  //画图处理
+    	LCD_SSD1303_TEMP_CODE01               0x8830 0x04D0 : image ,adhereto VIRTUAL_SPACE;
+    	//UNICODE_TEMP_CODE03                   0x8830 0x0380 : image ,adhereto VIRTUAL_SPACE;
+
+		UNICODE_TEMP_CODE(00 02)              0x8830 0x04D0 : image ,adhereto VIRTUAL_SPACE;
+		
+		
+		T01_COMMAND_CODE					  0x8A00 0x0400 : image ,adhereto VIRTUAL_SPACE;  //OID write command
+		FIND_BOOKSYS_CODE					  0x8A00 0x0300 : image ,adhereto VIRTUAL_SPACE;  //发现是否有书
+		READY_CHANGE_BOOK_CODE				  0x8A00 0x0300 : image ,adhereto VIRTUAL_SPACE;  //切换到新书
+		CHANGE_OID_CODE						  0x8A00 0x0300 : image ,adhereto VIRTUAL_SPACE;  //DPR3--->OID2码值转换
+        SOME_INDEX_CODE						  0x8A00 0x0300 : image ,adhereto VIRTUAL_SPACE;  //一些特殊index处理
+        
+        
+
+		ACTION_TEXT_DISPLAY_CODE        	  0x8D00 0x0300  : image ,adhereto VIRTUAL_SPACE;//action caption显示预处理
+		TEXT_CH_DISPLAY_CODE				  0x8D00 0x0300 : image ,adhereto VIRTUAL_SPACE;//文本显示处理
+		CTRL_DISPLAY_READY_CODE				  0x8D00 0x0300 : image ,adhereto VIRTUAL_SPACE;//控制方式显示处理预处理
+		CTRL_DISPLAY_CODE				  	  0x8D00 0x0300 : image ,adhereto VIRTUAL_SPACE;//控制方式显示处理
+		
+		LCE_ENCRYPT_CODE					  0x8D00 0x0300 : image ,adhereto VIRTUAL_SPACE;// lce文件加密处理
+		//JIAMI_CODE						  0x8D00 0x0180 : image ,adhereto VIRTUAL_SPACE;// 新加密方式中的处理加密
+		//FIND_NEWS_PASS_CODE				  0x8D00 0x0300  : image ,adhereto VIRTUAL_SPACE;   //查看是否新的文件加密
+		NEW_READ_ALLNEWS_CODE				  0x8D00 0x0300  : image ,adhereto VIRTUAL_SPACE;   //按照新的方式,找到文件的秘要和开始地址
+		JIAMI_CODE							  0x8D00 0x0200  : image ,adhereto VIRTUAL_SPACE;	  //文件头使用新密钥加密
+		T01_COMMAND_02_CODE 				  0x8E00 0x0200 : image ,adhereto VIRTUAL_SPACE;//OID write command
+		T01_COMMAND_01_CODE 				  0x8E00 0x0200 : image ,adhereto VIRTUAL_SPACE;//OID write command
+		POWER_TASK_TEMP_CODE04				  0x8D00 0x0180 : image ,adhereto VIRTUAL_SPACE;//自动关机检查
+		MMGR_KERNEL_TEMP_CODE00				  0x8D00 0x0180 : image ,adhereto VIRTUAL_SPACE;//耳机插拔检查及无播放op关处理
+		MMI_AP4_BAT_LOW_CODE				  0x8D00 0x0300 : image ,adhereto VIRTUAL_SPACE;//低电压提示音
+		BROWER_GO_PAGE_CODE					  0x8D00 0x0180 : image ,adhereto VIRTUAL_SPACE;//单元选定,准备进入对应单元的第一页
+		
+		SYSCLK_TEMP_CODE01					  0x8ED0 0x0180 : image ,adhereto VIRTUAL_SPACE;
+		
+        POWER_TASK_TEMP_CODE00				  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;
+		POWER_TASK_TEMP_CODE01				  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;
+		POWER_TASK_TEMP_CODE02				  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//
+		POWER_TASK_TEMP_CODE05				  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//
+		BROWSER_KEY_RELEASE_CODE			  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//按键浏览选择
+		CHANGE_APPLI_CODE					  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//
+		MMI_AP4_GLOBEKEY_CODE				  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//总按键定义处理
+		AP4_SEARCH_TOBROWSER_CODE			  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//
+		//MMI_AP4_DISPTIME_CODE				  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//
+		//MMI_AP4_DISPTIME_CODE01				  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;
+		GENDU_CONTROL_TEMPCODE00			  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//复读控制
+        GENDU_CONTROL_TEMPCODE01			  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//复读控制
+        ACTION_TEXT_WORDNUM_CODE			  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//显示字符个数统计
+        ACTION_TEXT_ONELINE_CODE			  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//captain显示第一行
+        ACTION_TEXT_TWOLINE_CODE			  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//captain显示第二行
+        CHOICE_WORD_CTRL_CODE				  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//next prev选择单词
+        DISPLAY_FIRSTWORD_CODE                0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//显示第一个word
+        FINDWORD_TEMP01_CODE				  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//查词功能地址，数量准备
+		MMI_AP4_KEY_PRESS_CODE06			  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//按键显示字符	
+		DISPLAY_CONTEXT_CODE				  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//按键翻页显示字符	
+		
+		
+		ADB_INIT_CODE						  0x8E80 0x0180 : image ,adhereto VIRTUAL_SPACE;//初始化词典
+		
+		//image
+		//TASK_INIT_CODE                       0xA000 0x0600 : image ,adhereto VIRTUAL_SPACE;
+		TASK_INIT_CODE                       0xC900 0x0600 : image ,adhereto VIRTUAL_SPACE;   //?
+		
+		POWER_TEMP_CODE00                    0x9000 0x0200 : image ,adhereto VIRTUAL_SPACE;//poweroff中使用，其它工程中不使用
+		POWER_TEMP_CODE01                    0x9100 0x0100 : image ,adhereto VIRTUAL_SPACE;
+		
+		SYSTEM_POWER_OFF_CODE                0xCE00 0x0100 : image ,adhereto VIRTUAL_SPACE;
+		
+		OID_TEMP_CODE00                      0x9000 0x0100 : image ,adhereto VIRTUAL_SPACE;
+		
+		AUTO_DISP_TEMP_CODE00                0x9000 0x0200 : image ,adhereto VIRTUAL_SPACE;
+		
+		LCD_SSD1303_TEMP_CODE00              0x9000 0x0300 : image ,adhereto VIRTUAL_SPACE;//屏幕初始化
+		//LCD_SSD1303_TEMP_CODE02              0x9000 0x0300 : image ,adhereto VIRTUAL_SPACE;//清屏
+		
+		//MMI_AP4_EXIT_CODE                    0x9000 0x0100 : image ,adhereto VIRTUAL_SPACE;
+		
+		//UNICODE_TEMP_CODE(00 02)             0x9000 0x0500 : image ,adhereto VIRTUAL_SPACE;
+		//UNICODE_TEMP_CODE03                  0x9500 0x0400 : image ,adhereto VIRTUAL_SPACE;
+		//LCD_SSD1303_TEMP_CODE01              0x9900 0x0900 : image ,adhereto VIRTUAL_SPACE;
+		IMG_HANDLER_TEMP_CODE00              0xCA00 0x0200 : image ,adhereto VIRTUAL_SPACE;
+		
+		MMI_STATUS_TEMP_CODE00               0xA400 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		MMI_AP4_RECORD_TEMP_CODE07           0xA400 0x0200 : image ,adhereto VIRTUAL_SPACE;   //yyy
+		MMI_AP4_RECORD_TEMP_CODE08           0xA400 0x0200 : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		MMI_STATUS_TEMP_CODE01               0xA600 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy
+		MMI_AP4_TEMP_CODE05                  0xA700 0x0200 : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		MMI_AP4_RECORD_TEMP_CODE00           0xA400 0x0200 : image ,adhereto VIRTUAL_SPACE;   //yyy
+		MMI_AP4_RECORD_TEMP_CODE01           0xA400 0x0300 : image ,adhereto VIRTUAL_SPACE;   //yyy
+		MMI_AP4_RECORD_TEMP_CODE03           0xA400 0x0200 : image ,adhereto VIRTUAL_SPACE;//跟读录音回放显示
+		MMI_AP4_RECORD_TEMP_CODE04           0xA400 0x0100 : image ,adhereto VIRTUAL_SPACE;//yyy
+		
+		MMI_AP4_REREAD_REC_CODE              0xC400 0x0100 : image ,adhereto VIRTUAL_SPACE;   //?
+		
+		MMI_AP4_RECORD_TEMP_CODE05           0xA400 0x0200 : image ,adhereto VIRTUAL_SPACE;//yyy
+		MMI_AP4_RECORD_TEMP_CODE06           0xA400 0x0400 : image ,adhereto VIRTUAL_SPACE;//yyy
+		
+		NAVIGATION_CODE                 0x9000 0x0A00  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		MMI_AP4_SEARCH_TEMP_CODE03      0x9A00 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		MMI_AP4_REMOTE_AP4_CODE         0x9D00 0x0100  : image ,adhereto VIRTUAL_SPACE;   //?
+		
+		//FS_CREATE_BUF_CODE              0x9A00 0x0A00  : image ,adhereto VIRTUAL_SPACE;   //?
+		FS_CREATE_BUF_CODE              0x9000 0x0B00  : image ,adhereto VIRTUAL_SPACE;   //?
+		
+		FILE_TEMP_CODE02                0x9A00 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		MMI_AP4_SEARCH_TEMP_CODE04      0x9B00 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		MMI_AP4_SEARCH_TEMP_CODE05      0x9A00 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		//MMI_AP4_SEARCH_TEMP_CODE06      0x9A00 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		GET_FILE_NAME_CODE				0x9A00 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		GET_DIR_NAME_CODE				0x9A00 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		NAVIGATION_TEMP_CODE(00 05)     0x9D00 0x0500  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		MMI_AP4_START_TEMP_CODE01       0xCC00 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		MMI_AP4_RELOAD_TEMP_CODE00      0xA400 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		MMI_AP4_PLAYER_EOF_CODE         0xA600 0x0300  : image ,adhereto VIRTUAL_SPACE;   //播放mp3后的处理
+		MMI_AP4_NO_PLAYER_CODE         0xA600 0x0300  : image ,adhereto VIRTUAL_SPACE;   //没有播放提示mp3后的处理
+		
+		SEARCH_OPEN_FILE_TEMP_CODE      0xA400 0x0400  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+        BROWER_FILE_INIT_CODE			0xA400 0x0400  : image ,adhereto VIRTUAL_SPACE;   //
+		BROWER_FILE_CODE				0xA400 0x0400  : image ,adhereto VIRTUAL_SPACE;   //
+		BROWER_DIR_INIT_CODE			0xA400 0x0400  : image ,adhereto VIRTUAL_SPACE;   //
+		BROWER_DIR_CODE				    0xA400 0x0400  : image ,adhereto VIRTUAL_SPACE;   //
+		READY_GO_SUB_CODE				0xA400 0x0400  : image ,adhereto VIRTUAL_SPACE;   //
+		READY_GO_SUBROOT_CODE			0xA400 0x0400  : image ,adhereto VIRTUAL_SPACE;   //
+		BROWER_BACK_SUBROOT_CODE		0xA400 0x0400  : image ,adhereto VIRTUAL_SPACE;   //
+		//FIND_NEWS_PASS_CODE				0xA400 0x0400  : image ,adhereto VIRTUAL_SPACE;   //查看是否新的文件加密
+		
+		
+		
+		MMI_AP4_REC_TEMP_CODE01         0xC500 0x0200  : image ,adhereto VIRTUAL_SPACE;//跟读录音文件查找播放
+		MMI_AP4_REC_TEMP_CODE02         0xA400 0x0300  : image ,adhereto VIRTUAL_SPACE;		//yyy
+		//MMI_AP4_REC_TEMP_CODE03         0x9F00 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy   record
+		MMI_AP4_REC_TEMP_CODE04         0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+
+//		BROWSER_KEY_RELEASE_CODE		0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		MMI_AP4_REREAD_PLAY_CODE        0xC700 0x0100  : image ,adhereto VIRTUAL_SPACE;   //跟读录音播放
+		
+		MMI_AP4_KEY_PRESS_CODE00        0xC500 0x0300  : image ,adhereto VIRTUAL_SPACE;		//yyy   play
+		MMI_AP4_KEY_PRESS_CODE01        0xC500 0x0100  : image ,adhereto VIRTUAL_SPACE;	//跟读，对比，录音按键准备退出
+		MMI_AP4_KEY_PRESS_CODE02        0xC500 0x0200  : image ,adhereto VIRTUAL_SPACE;	//模式键短按退出到文件浏览模式
+		MMI_AP4_KEY_PRESS_CODE03        0xC500 0x0100  : image ,adhereto VIRTUAL_SPACE;		//yyy
+		OID_NEXT_PRESS_CODE				0xC500 0x0100  : image ,adhereto VIRTUAL_SPACE;		//OID2模式下翻译功能
+		MMI_AP4_BAKKEY_PRESS_CODE		0xC500 0x0100  : image ,adhereto VIRTUAL_SPACE;		//跟读功能切换
+		
+		MMI_AP4_REC_TEMP_CODE05         0xC800 0x0200  : image ,adhereto VIRTUAL_SPACE;	//yyy
+		
+		GENDU_CONTROL_CODE				0xC500 0x0100 : image ,adhereto VIRTUAL_SPACE;//复读控制
+		//MMI_AP4_KEY_PRESS_CODE06		0xC500 0x0100 : image ,adhereto VIRTUAL_SPACE;//按键显示字符
+		LCD_LINE_CLEAR_CODE				0xC500 0x0100 : image ,adhereto VIRTUAL_SPACE;//lcd画线操作clear
+		LCD_LINE_WRITE_CODE				0xC500 0x0100 : image ,adhereto VIRTUAL_SPACE;//lcd画线操作write
+		MMI_AP4_FANYI_PRESS_CODE		0xC500 0x0100 : image ,adhereto VIRTUAL_SPACE;//翻译功能实现
+		
+		
+		RECORDER_TEMP_CODE06            0x9000 0x0100  : image ,adhereto VIRTUAL_SPACE;
+		RECORDER_TEMP_CODE07            0x9000 0x0100  : image ,adhereto VIRTUAL_SPACE;
+		
+		RECORDER_TEMP_CODE(00 05)       0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;
+		AUADC_TEMP_CODE(00 01)          0x9400 0x0300  : image ,adhereto VIRTUAL_SPACE;
+		//AGC_Init_Code                   0x9700 0x0100  : image ,adhereto VIRTUAL_SPACE;
+		AUADC_COMMON_CODE               0x9800 0x0500  : image ,adhereto VIRTUAL_SPACE;
+		//AGC_Code                        0x9D00 0x0200  : image ,adhereto VIRTUAL_SPACE;
+		
+		KB_RESIZE_CODE                  0xAF00 0x0600  : image ,adhereto VIRTUAL_SPACE;   //
+		
+		MMI_AP4_RECORD_TEMP_CODE02      0xA400 0x0100 : image ,adhereto VIRTUAL_SPACE;    //yyy
+		MMI_AP4_REC_TEMP_CODE00         0xA500 0x0500  : image ,adhereto VIRTUAL_SPACE;   //yyy   record
+		
+		MMI_AP4_RP_TEMP_CODE02          0xA400 0x0500  : image ,adhereto VIRTUAL_SPACE;   //yyy   record
+		MMI_AP4_RP_REC_TEMP_CODE01      0xC500 0x0100  : image ,adhereto VIRTUAL_SPACE;   //?
+		
+		MMI_AP4_RP_TEMP_CODE00          0x9600 0x0400  : image ,adhereto VIRTUAL_SPACE;   //yy
+		SEARCH_REMOTE_COV_CODE          0x9A00 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yy
+		MMI_AP4_RP_TEMP_CODE01          0xA400 0x0400  : image ,adhereto VIRTUAL_SPACE;   //yy
+		MMI_AP4_RP_TEMP_CODE03          0xA400 0x0400  : image ,adhereto VIRTUAL_SPACE;   //yy
+		
+		MMI_AP4_RP_TEMP_CODE04          0xC500 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy   play
+		MMI_AP4_RP_TEMP_CODE05          0xA400 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy key_press_deal处理部分
+		MMI_AP4_RP_TEMP_CODE06          0xA400 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		MMI_AP4_RP_TEMP_CODE07          0xA400 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		MMI_AP4_RP_PLAY_TEMP_CODE01     0xC600 0x0100  : image ,adhereto VIRTUAL_SPACE;   //?
+
+		FIND_PASS_01_CODE				0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //查看是否新的文件加密
+		FIND_PASS_02_CODE				0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //查看是否新的文件加密
+		FIND_PASS_03_CODE		   		0x9000 0x0200 : image ,adhereto VIRTUAL_SPACE; 		//数学运算
+//		FIND_NEWS_PASS_CODE				0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //查看是否新的文件加密
+//		NEW_READ_ALLNEWS_CODE			0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //按照新的方式,找到文件的秘要和开始地址
+//		JIAMI_CODE						0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;	  //文件头使用新密钥加密
+		READ_ALLNEWS_CODE               0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //读所有控制信息
+		READ_BOOKNEWS_CODE              0x9000 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		READ_PAGENEWS_CODE              0x9000 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		READ_CONTROLNEWS_CODE           0x9000 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_BOOK_ENCRYPT_CODE        0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //y
+		
+		SEARCH_PLAY_END_CODE            0x9000 0x0400  : image ,adhereto VIRTUAL_SPACE;   //y
+		
+		SEARCH_AP4INFO_CODE             0x9000 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_ADBINFO_CODE				0x9000 0x0300  : image ,adhereto VIRTUAL_SPACE;   //读取abd文件信息
+		
+		PLAYER_AP3_START_CODE           0xC500 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy   play
+		
+		SEARCH_PLAY_TEMP_CODE           0xC600 0x0200  : image ,adhereto VIRTUAL_SPACE;   //y   play
+		
+		SEARCH_NORMAL_TEMP_CODE         0x9000 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_IDLE_TEMP_CODE           0xA400 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		AP4_SEARCH_CODE                 0xA400 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		PAGE_SEARCH_CODE                0x9200 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		JUDGE_KEY_CODE              	0xA400 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		JUDGE_IMMOBILITY_COOR_CODE      0x9200 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		JUDGE_MOBILITY_COOR_CODE        0x9000 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		JUDGE_MIX_COOR_CODE             0x9C00 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		RECORD_JUDGE_CODE               0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_RP_CONFIRM_CODE          0xA400 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_TWOBYTES_COOR_CODE       0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		CHECK_GAMETIEM_CODE             0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		GAME_TIMEOUT_DEAL_CODE          0x9C00 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_AP4_TEMP_CODE            0xA600 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_BOOK_TEMP_CODE           0xA400 0x0300  : image ,adhereto VIRTUAL_SPACE;   //y
+		SEARCH_PAGE_TEMP_CODE           0xA400 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_CONTROL_TEMP_CODE        0xA400 0x0400  : image ,adhereto VIRTUAL_SPACE;   //yyy
+
+		SEARCH_IN_GAME_TEMP_CODE00      0x9C00 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_IN_GAME_TEMP_CODE02      0x9C00 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_IN_GAME_TEMP_CODE03      0x9C00 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_GAME_SORT_CODE           0x9C00 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		//SEARCH_GAME_COMBINED_CODE       0x9C00 0x0500  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_GAME_COMBINED_CODE       0x9C00 0x0400  : image ,adhereto VIRTUAL_SPACE;   //?
+		COMBINED_GAME_TEMP_CODE00       0xA000 0x0100  : image ,adhereto VIRTUAL_SPACE;   //?
+		COMBINED_GAME_TEMP_CODE01       0xA000 0x0100  : image ,adhereto VIRTUAL_SPACE;   //?
+		
+		SEARCH_GAME_CONNECT_CODE00      0x9C00 0x0400  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_GAME_CONNECT_CODE01      0x9C00 0x0500  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_IN_GAME_TEMP_CODE01      0xA100 0x0A00  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_IN_GAME_CODE             0xAB00 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_DO_GAME_CODE             0xAB00 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_GAME_CONSOLE_CODE        0xAD00 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_GAME_CODE                0x9000 0x0C00  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_GAME_TEMP_CODE00         0x9C00 0x0400  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_GAME_TEMP_CODE01         0x9C00 0x0A00  : image ,adhereto VIRTUAL_SPACE;   //y
+		SEARCH_NORMAL_CODE              0xCE00 0x0100  : image ,adhereto VIRTUAL_SPACE;   //?
+		
+		GAME_EXIT_TO_CONTROL_CODE       0xA400 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_SCRIPT_CODE              0x9000 0x0A00  : image ,adhereto VIRTUAL_SPACE;   //yyy
+
+		SEARCH_REMOTE_TEMP_CODE01       0x9000 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_REMOTE_TEMP_CODE00       0x9000 0x0C00  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_REMOTE_SPEC_CODE         0x9000 0x0500  : image ,adhereto VIRTUAL_SPACE;   //y
+		
+		SEARCH_REMOTE_KEY_NULL_CODE     0x9000 0x0400  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_REMOTE_KEY_AP4_CODE      0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_REMOTE_KEY_BOOK_CODE     0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_REMOTE_KEY_PAGE_CODE     0x9000 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_REMOTE_TEMP_CODE03       0x9B00 0x0600  : image ,adhereto VIRTUAL_SPACE;   //yy  conv16
+		
+		FLOAT_DISPLAY_CODE00            0x9000 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		FLOAT_DISPLAY_CODE01            0x9000 0x0600  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		FLOAT_DISPLAY_CODE02            0x9000 0x0500  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		FLOAT_DISPLAY_CODE03            0xA200 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		CAL_RESULT_CODE00               0xA400 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		CAL_RESULT_CODE01               0x9000 0x0A00  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		CAL_NUM1_CODE00                 0xA700 0x0C00  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		CAL_NUM1_CODE01                 0xA700 0x0B00  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		CAL_NUM1_CODE                   0xB300 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_CAL_NUM1_OP_CODE         0xA700 0x0500  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		CAL_NUM2_CODE00                 0xA700 0x0C00  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		CAL_NUM2_CODE01                 0xA700 0x0B00  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		CAL_NUM2_CODE                   0xB300 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_CAL_NUM2_OP_CODE         0xA700 0x0600  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_REMOTE_CALDO_CODE        0xB400 0x0700  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_REMOTE_CALEXIT_CODE      0xA400 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_REMOTE_TEMP_CODE02       0xBB00 0x0300  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_ACTION_TEMP_CODE00       0xBE00 0x0300  : image ,adhereto VIRTUAL_SPACE;   //?
+
+		ACTION_PLAY_SEQUENCE_CODE		0xC100 0x0100  : image ,adhereto VIRTUAL_SPACE;   //?
+		ACTION_TEMP_CODE(01 07)         0xC100 0x0100  : image ,adhereto VIRTUAL_SPACE;   //?
+		ACTION_TEMP_CODE09         		0xC100 0x0100  : image ,adhereto VIRTUAL_SPACE;   //?
+		ACTION_TEMP_CODE10         		0xC100 0x0100  : image ,adhereto VIRTUAL_SPACE;   //?
+		
+		//SEARCH_ACTION_TEMP_CODE00       0xBE00 0x0400  : image ,adhereto VIRTUAL_SPACE;   //yyy
+	  	ACTION_SEQUENCE_CODE            0xC200 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		ACTION_SELECT_BOOK_CODE         0xC200 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		ACTION_SELECT_PAGE_CODE         0xC200 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		ACTION_SELECT_CONTROL_CODE      0xC200 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		SEARCH_ACTION_REPEAT_CODE       0xA400 0x0200  : image ,adhereto VIRTUAL_SPACE;//repeat动作处理
+		//ACTION_TEXT_DISPLAY_CODE        0xA400 0x0200  : image ,adhereto VIRTUAL_SPACE;//action caption显示预处理
+		FIND_LINE_PARAM_CODE			0xA400 0x0200 : image ,adhereto VIRTUAL_SPACE;//找到画线的参数
+		TEXT_BACKDISPLAY_CODE			0xA400 0x0200 : image ,adhereto VIRTUAL_SPACE;//返回显示英文
+		//TEXT_CH_DISPLAY_CODE			0xA400 0x0200 : image ,adhereto VIRTUAL_SPACE;//显示翻译或者查词
+		FINDWORD_DISPLAY_CODE			0xA400 0x0200 : image ,adhereto VIRTUAL_SPACE;//查词显示原文
+		TEXT_NOFIND_DISPLAY_CODE		0xA400 0x0200 : image ,adhereto VIRTUAL_SPACE;//未找到显示
+		//T01_COMMAND_CODE				0xA400 0x0200 : image ,adhereto VIRTUAL_SPACE;//T01笔头command
+		//SET_CALIB_CODE					0xA400 0x0200 : image ,adhereto VIRTUAL_SPACE;//T01笔头传输校正数据
+		
+		SEARCH_ACTION_TEMP_CODE01       0xC200 0x0400  : image ,adhereto VIRTUAL_SPACE;   //yyy
+		SEARCH_RAND_CODE                0xC600 0x0100  : image ,adhereto VIRTUAL_SPACE;//查找随机数
+		
+
+    SEARCH_COOR_TEMP_CODE           0xA600 0x0500  : image ,adhereto VIRTUAL_SPACE;   //yyy
+    
+    SEARCH_SEQUENCE_JUDGE_CODE      0xA400 0x0100  : image ,adhereto VIRTUAL_SPACE;   //yyy
+    SEARCH_SEQUENCE_TEMP_CODE       0xC600 0x0200  : image ,adhereto VIRTUAL_SPACE;   //yyy   play
+
+		//wav
+		PLAYER_WAV_CODE                 0x9000 0x0500 : image ,adhereto VIRTUAL_SPACE;//wav开始播放处理
+		//PLAYER_WAV_CODE                 0xA400 0x0500 : image ,adhereto VIRTUAL_SPACE;//wav开始播放处理
+
+		MP3_TEMP_CODE(00 04)		        0x9000 0x1100 : image ,adhereto VIRTUAL_SPACE;
+		DAC_TEMP_CODE(00 02)			      0xA100 0x0300 : image ,adhereto VIRTUAL_SPACE;
+		MP3_COMMON_CODE                 0xA400 0x0900 : image ,adhereto VIRTUAL_SPACE;
+		DAC_COMMON_CODE                 0xAD00 0x0870 : image ,adhereto VIRTUAL_SPACE;
+		
+		FAT_TEMP_CODE(00 19)            0xB570 0x0F90 : image ,adhereto VIRTUAL_SPACE;
+//		FAT_TEMP_CODE00            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;//fsgetsize,fssetattibute
+//		FAT_TEMP_CODE01            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;//fsopen
+//		FAT_TEMP_CODE02            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;
+//		FAT_TEMP_CODE03            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;//fsclose
+//		FAT_TEMP_CODE04            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;
+//		FAT_TEMP_CODE05            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;//fsdelete
+//		FAT_TEMP_CODE06            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;//fsdirectory
+//		FAT_TEMP_CODE07            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;//fsflush
+//		FAT_TEMP_CODE08            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;
+//		FAT_TEMP_CODE09            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;
+//		FAT_TEMP_CODE10            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;
+//		FAT_TEMP_CODE11            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;//fsgetnextentry
+//		FAT_TEMP_CODE12            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;//fsgetentry
+//		FAT_TEMP_CODE13            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;
+//		FAT_TEMP_CODE14            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;
+//		FAT_TEMP_CODE15            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;//fsopenforunicode
+//		FAT_TEMP_CODE16            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;//fsdirforunicode_exit
+//		FAT_TEMP_CODE17            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;//fsinit
+//		FAT_TEMP_CODE18            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;//fsdirforunicode
+//		FAT_TEMP_CODE19            0xB500 0x1000 : image ,adhereto VIRTUAL_SPACE;//fsdirforunicode_ext
+
+		ACTION_TEMP_CODE08         0xB570 0x0200  : image ,adhereto VIRTUAL_SPACE;   //?
+		HINT_NAME_COPY_CODE		   0xB570 0x0F90  : image ,adhereto VIRTUAL_SPACE;	//提示音填充
+
+
+//		FIND_PASS_03_CODE		   0xB570 0xF90 : image ,adhereto VIRTUAL_SPACE; //数学运算
+		PRINT_CODE				   0xB570 0x0180 : image ,adhereto VIRTUAL_SPACE;//打印头文件信息
+//		LINK_NAME_CODE			   0xB570 0x0280 : image ,adhereto VIRTUAL_SPACE;//连接文件名字
+        MMI_AP4_DISPALLTIME_CODE		 	  0xC180 0x0380 : image ,adhereto VIRTUAL_SPACE;
+		MMI_AP4_DISPTIME_CODE01				  0xC280 0x0280 : image ,adhereto VIRTUAL_SPACE;
+
+		
+		MMI_AP4_PLAY_STOP_CODE          0xC500 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy   Ap4 PlayStop部分
+//		MMI_AP4_BAT_LOW_CODE            0xC500 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy   play
+		
+		MMI_AP4_REC_TEMP_CODE03         0xC600 0x0200  : image ,adhereto VIRTUAL_SPACE;   //总的长按键处理 play record
+		MMI_AP4_KEY_LONGPRESS_CODE00    0x9F00 0x0100  : image ,adhereto VIRTUAL_SPACE;   //?
+		MMI_AP4_KEY_LONGPRESS_CODE01    0x9F00 0x0100  : image ,adhereto VIRTUAL_SPACE;   //?
+		MMI_AP4_KEY_LONGPRESS_CODE02    0x9F00 0x0100  : image ,adhereto VIRTUAL_SPACE;   //?
+		MMI_AP4_KEY_LONGPRESS_CODE03    0x9F00 0x0200  : image ,adhereto VIRTUAL_SPACE;   //?
+		
+		//LCD_SSD1303_TEMP_CODE03         0xC500 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy   play
+		MMI_AP4_KEY_CODE                0xC600 0x0300 : image ,adhereto VIRTUAL_SPACE;   //yyy   play
+		
+		SEARCH_GAME_TIME_CODE           0xC500 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy   play
+		SEARCH_GAME_STATUS_CODE         0xC900 0x0100 : image ,adhereto VIRTUAL_SPACE;   //游戏状态检查
+		
+		MMI_AP4_USB_TEMP_CODE00         0x9F00 0x0200 : image ,adhereto VIRTUAL_SPACE;   //yyy   record
+		AP4_SEARCH_END_TEMP_CODE00      0x9F00 0x0200 : image ,adhereto VIRTUAL_SPACE;   //yyy   record
+		MMI_AP4_POWEROFF_TEMP_CODE00    0x9000 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		MMI_PLAYINTRO_CODE00            0x9000 0x0600 : image ,adhereto VIRTUAL_SPACE; //长短文件名查找
+		MMI_AP4_SEARCH_TEMP_CODE(00 02) 0x9600 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		MMI_PLAYINTRO_CODE01            0xC500 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy   play
+    MMI_AP4_TEMP_CODE01             0xCF00 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy
+    MMI_AP4_TEMP_CODE02             0xCF00 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy
+    MMI_AP4_TEMP_CODE03             0xCF00 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy
+    MMI_AP4_TEMP_CODE04             0xCF00 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy   play
+    MMI_AP4_START_TEMP_CODE00       0xC600 0x0300 : image ,adhereto VIRTUAL_SPACE;   //yyy
+    
+    MMI_AP4_NOTFIND_AP4_CODE        0xC600 0x0100 : image ,adhereto VIRTUAL_SPACE;   //?
+    
+    MMI_AP4_TEMP_CODE06             0xCF00 0x0100 : image ,adhereto VIRTUAL_SPACE;   //y
+    MMI_AP4_TEMP_CODE07             0xCF00 0x0100 : image ,adhereto VIRTUAL_SPACE;   //y
+    MMI_AP4_TEMP_CODE08             0xC600 0x0100 : image ,adhereto VIRTUAL_SPACE;   //y
+    MMI_AP4_TEMP_CODE09             0xCF00 0x0100 : image ,adhereto VIRTUAL_SPACE;   //y
+    
+    MMI_AP4_COV8_CODE               0xCA00 0x0100 : image ,adhereto VIRTUAL_SPACE;   //yyy
+    
+    MMI_AP4_NOFILE_TEMP_CODE        0xA400 0x0200 : image ,adhereto VIRTUAL_SPACE;   //yyy
+    MMI_AP4_TEMP_CODE00             0xC600 0x0200 : image ,adhereto VIRTUAL_SPACE;   //yyy   play
+
+	CLUSTERLIST_CODE				0xCE00 0x0200 : image ,adhereto VIRTUAL_SPACE;//簇链保存，释放处理
+		SRV_PLAYER_TEMP_CODE(00 07)     0xCA00 0x0200 : image ,adhereto VIRTUAL_SPACE;   //yyy
+
+		SCAN_OID_CODE   		        0xC800 0x0400 : image ,adhereto VIRTUAL_SPACE;   //?
+		MMI_AP4_DISPTIME_CODE			 0xC800 0x0200 : image ,adhereto VIRTUAL_SPACE;
+		
+		
+		OID_INIT_CODE   		            0xC900 0x0300 : image ,adhereto VIRTUAL_SPACE;   //?
+		HP_SPEAK_CHANGE_CODE            0xC900 0x0100 : image ,adhereto VIRTUAL_SPACE;   //?
+		
+		//MMGR_KERNEL_TEMP_CODE00   		  0xCA00 0x0200 : image ,adhereto VIRTUAL_SPACE;   //?
+	// POWER_TASK_TEMP_CODE00   		    0xCA00 0x0200 : image ,adhereto VIRTUAL_SPACE;   //?
+    //POWER_TASK_TEMP_CODE01   		    0xCA00 0x0200 : image ,adhereto VIRTUAL_SPACE;   //?
+    //POWER_TASK_TEMP_CODE02   		    0xCA00 0x0200 : image ,adhereto VIRTUAL_SPACE;   //?
+    POWER_TASK_TEMP_CODE03   		    0xCA00 0x0200 : image ,adhereto VIRTUAL_SPACE;   //?
+    WAV_PALY_TIME_CODE                   0xCA00 0x0200 : image ,adhereto VIRTUAL_SPACE;//wav播放时间计算
+   // POWER_TASK_TEMP_CODE00				0xCA00 0x0200 : image ,adhereto VIRTUAL_SPACE;   //?
+    //POWER_TASK_TEMP_CODE04   		    0xCA00 0x0100 : image ,adhereto VIRTUAL_SPACE;   //?
+    //KEYPAD_PROCESS_CODE   		      0xC800 0x0400 : image ,adhereto VIRTUAL_SPACE;   //?
+    //TIMER_SOFT_PROCESS_CODE		      0xCA00 0x0100 : image ,adhereto VIRTUAL_SPACE;   //?
+
+
+		
+		MMI_AP4_PLAYTIME_TEMP_CODE      0xC500 0x0300 : image ,adhereto VIRTUAL_SPACE;   //yyy   play
+		
+		MMI_AP4_RP_REC_TEMP_CODE00      0xC800 0x0100 : image ,adhereto VIRTUAL_SPACE;   //?
+		MMI_AP4_RP_PLAY_TEMP_CODE00     0xC800 0x0100 : image ,adhereto VIRTUAL_SPACE;   //?
+		
+		COOR_JUDGE_DEAL_CODE            0xC500 0x0300 : image ,adhereto VIRTUAL_SPACE;   //判断index处理后特殊码值1
+		
+		JUDGE_INDEX_DEAL_CODE           0xA600 0x0500 : image ,adhereto VIRTUAL_SPACE;   //判断index处理后特殊功能2
+
+		JUDGE_REREAD_CODE				0xA600 0x0400  : image ,adhereto VIRTUAL_SPACE; // 虚拟按键处理部分
+		
+		SEARCH_INDEX_COOR_CODE          0xCB00 0x0100 : image ,adhereto VIRTUAL_SPACE;   //?
+		
+		SEARCH_OPEN_FILE_FAIL_CODE      0xCE00 0x0200 : image ,adhereto VIRTUAL_SPACE;   //yyy
+
+		
+		SEARCH_RELOAD_AP4_INFO_CODE     0xCB00 0x0500 : image ,adhereto VIRTUAL_SPACE;   //yyy
+		MMI_AP4_CONTROL_TEMP_CODE00     0xCE00 0x0200 : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		FILE_TEMP_CODE(00 01)           0xC900 0x0300 : image ,adhereto VIRTUAL_SPACE;   //yyy
+		READ_OID_SOUND_CODE             0xCC00 0x0400 : image ,adhereto VIRTUAL_SPACE;   //yyy
+		
+		
+	}
+	
+	EXTMEM3 0x500000 0x100000 : ws 3
+	{
+		VIRTUAL_SPACE 0x0 0x100000 : image;
+	}
+}

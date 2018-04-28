@@ -1,0 +1,31 @@
+---- g_select_appli Matches (30 in 11 files) ----
+Com_var.c (fw\mmi\shared)://_MEM_TYPE_SLOW_   select_appli      g_select_appli = DEFAULT_APPLI;
+Com_var.h (fw\mmi\shared):_GLOBEXT_   _MEM_TYPE_SLOW_   select_appli   g_select_appli
+Mmi_storage.c (fw\mmi\mstorage):         /*g_select_appli = g_old_select_appli;
+Mmi_storage.c (fw\mmi\mstorage):         //g_select_appli = DEFAULT_APPLI;
+Mmi_storage.c (fw\mmi\mstorage):            g_select_appli = g_old_select_appli;
+Mmi_storage.c (fw\mmi\mstorage):         g_select_appli = g_old_select_appli;
+Mmi_storage.c (fw\mmi\mstorage):            g_select_appli = g_old_select_appli;
+Mmi_storage.c (fw\mmi\mstorage):            //g_select_appli = DEFAULT_APPLI;
+Mmi_storage.c (fw\mmi\mstorage):            //g_select_appli = g_old_select_appli = C_USB_HID;
+Mmi_storage.c (fw\mmi\mstorage):             g_select_appli = g_old_select_appli;
+Mmi_storage.c (fw\mmi\mstorage):            //g_select_appli = DEFAULT_APPLI;
+Mmi_storage.c (fw\mmi\mstorage):			g_select_appli = g_old_select_appli;
+Mmi_storage.c (fw\mmi\mstorage):            //g_select_appli = DEFAULT_APPLI;
+Mmi_storage.c (fw\mmi\mstorage):      g_select_appli = g_old_select_appli;
+Power.c (fw\modules\power):   if( g_select_appli == MSTORAGE_APPLI )
+Power_task.c (fw\modules\power):      /*if( g_select_appli == MSTORAGE_APPLI )
+Power_task.c (fw\modules\power):            &&( g_select_appli == MSTORAGE_APPLI ))
+Power_task.c (fw\modules\power):            &&( g_select_appli == MSTORAGE_APPLI ))
+Usb_main.c (kb952\usb\usb\fw):   g_select_appli = MSTORAGE_APPLI;
+Usb_mmgr_kernel.c (kb952\usb\usb\fw\modules\mmi_manager):   //if( g_select_appli != MSTORAGE_APPLI )
+Usb_mmi_status.c (kb952\usb\usb\fw\mmi\status):               /*g_select_appli = MSTORAGE_APPLI;
+Usb_mmi_status.c (kb952\usb\usb\fw\mmi\status):         //g_select_appli = IDLE_APPLI;
+Usb_mmi_status.c (kb952\usb\usb\fw\mmi\status):			send_hex_u8(g_select_appli);
+Usb_mmi_status.c (kb952\usb\usb\fw\mmi\status):		if(g_select_appli == C_CAB)CommonLoadCode( C_CAB );
+Usb_mmi_status.c (kb952\usb\usb\fw\mmi\status):		if(g_select_appli == C_USB_HID)CommonLoadCode( C_USB_HID);
+Usb_mmi_status.c (kb952\usb\usb\fw\mmi\status):            //g_select_appli = MSTORAGE_APPLI;
+Usb_mmi_status.c (kb952\usb\usb\fw\mmi\status):         //if( g_select_appli != MSTORAGE_APPLI )
+Usb_player_task.c (kb952\usb\usb\fw\modules\player):   if( g_b_remote_on &&( g_select_appli != AP3_APPLI ))
+Variable.c (fw):U8                g_select_appli                         @ 0x6FFE;
+Variable.h (fw):extern   U8                g_select_appli;

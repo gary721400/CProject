@@ -1,0 +1,1 @@
+#define NOW_DATA		"20150811"

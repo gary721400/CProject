@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+	<assembly_include_path value="NULL"/>
+	<auto_refresh_memory value="true"/>
+	<auto_refresh_register value="true"/>
+	<comply_ansi value="true"/>
+	<default-lib-dirs value="true"/>
+	<default-libs value="true"/>
+	<dump_memory_map value="true"/>
+	<encryption value="true"/>
+	<exception_vector value="0x010030"/>
+	<export_symbol value="false"/>
+	<include_path value="%KBDMIDS%\include\SPIBOOT_KBDM9;..\..\..\FW;..\..\..\KB952;..\..\..\FW\conf"/>
+	<internal_download_config INTERNAL_IPs="Download"/>
+	<is_generate_debugging_info value="true"/>
+	<libraries value="NULL"/>
+	<library_path value="%KBDMIDS%\lib\SPIBOOT_KBDM9;%KBDMIDS%\lib"/>
+	<linker_control_file value="boot.lcf"/>
+	<macro_file value="NULL"/>
+	<norflash_op_timeout value="30 sec"/>
+	<output-list value="false"/>
+	<output_path value="output"/>
+	<project_files value="..\..\..\FW\Library\ADC.asm;..\..\..\FW\sio\com.c;..\..\..\FW\Variable.c;fw\bootmain.c"/>
+	<project_id value="1970561396"/>
+	<reset_2_entry value="true"/>
+	<reset_timeout value="5000"/>
+	<step_timeout value="3000"/>
+	<stop_on_exception value="true"/>
+	<target_body value="SPIBOOT_KBDM9"/>
+	<trace_files value="NULL"/>
+	<triger_timeout_message value="true"/>
+	<version value="KBDMIDS 00.01"/>
+	<watch_expressions value="g_b_earphone_present:0;wr:0;id:4;task_id:0;s_mailbox_cmd:4;s_mailboxdesc_cmd:4;volume_right:0;srvplayer_g_arg:0;g_u8_player_volume_l:0;lFileMax:0;longFileName:4;tisiFileShortpath:2;fat_g_cur_nav:4;g_b_unicode:0;error:0;Buf:4;Start_Sector:0;g_setting_list:4;g_conv_buffer:4;src_buffer:2;nb_char:0;lang:0;v4:4;height:0;Buf:4;Start_Sector:0;sector:0;nor_flash_address:4;nor_flash_bass_address:4"/>
+</project>

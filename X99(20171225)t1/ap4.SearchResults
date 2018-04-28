@@ -1,0 +1,6 @@
+---- gbRereadingFlag Matches (5 in 2 files) ----
+Mmi_ap3.c (fw\mmi\ap3):    gbRereadingFlag = false;
+Mmi_ap3.c (fw\mmi\ap3):    gbRereadingFlag = true;
+Mmi_ap3.c (fw\mmi\ap3):        gbRereadingFlag = false;
+Mmi_ap3.c (fw\mmi\ap3):    if(gbRereadingFlag)return true;
+Variable.h (fw):#define  gbRereadingFlag 		g_sys_flag.bits.bRev15
