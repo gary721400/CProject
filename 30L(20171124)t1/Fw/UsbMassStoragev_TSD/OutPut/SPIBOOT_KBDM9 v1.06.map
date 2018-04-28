@@ -1,0 +1,430 @@
+SPACE_XRAM
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$reserved_Stack0                             0         0x400     0x400     
+_XRAM$RD$Buf                                                     0x400     0x600     0x200     
+PCMv2RAM                                                         0x600     0x64a     0x4a      
+_USB_STORAGE_XRAM$RD$gusb_stor                                   0x64a     0x670     0x26      
+_USB_MS_XRAM$RD$usb_stor                                         0x670     0x696     0x26      
+SPI_Flash_Var                                                    0x696     0x6a8     0x12      
+_USB_CORE_DATA$RD$fp_init_interface                              0x6a8     0x6b8     0x10      
+_USB_CORE_DATA$RD$fp_class_func                                  0x6b8     0x6c8     0x10      
+_USB_STORAGE_XRAM$RD$USBReadyCount                               0x6c8     0x6d0     0x8       
+_XRAM$RD$usb_nosd_timer                                          0x6d0     0x6d4     0x4       
+_XRAM$RD$sys_led_timer                                           0x6d4     0x6d8     0x4       
+_XRAM$RD$sd1_sector                                              0x6d8     0x6dc     0x4       
+_XRAM$RD$rec_led_timer                                           0x6dc     0x6e0     0x4       
+_XRAM$RD$op_close_timer                                          0x6e0     0x6e4     0x4       
+_XRAM$RD$g_autopoweroff_timer                                    0x6e4     0x6e8     0x4       
+_XRAM$RD$fp_ep2_TX                                               0x6e8     0x6ec     0x4       
+_XRAM$RD$fp_ep2_RX                                               0x6ec     0x6f0     0x4       
+_XRAM$RD$Start_Sector                                            0x6f0     0x6f4     0x4       
+_XRAM$RD$Length                                                  0x6f4     0x6f8     0x4       
+_USB_STORAGE_XRAM$RD$usb_irom_stor                               0x6f8     0x6fc     0x4       
+_USB_STORAGE_XRAM$RD$fp_USB_Stor_TX                              0x6fc     0x700     0x4       
+_USB_STORAGE_XRAM$RD$fp_USB_Stor_RX                              0x700     0x704     0x4       
+_USB_STORAGE_XRAM$RD$fp_USB_Stor_Other_SCSI                      0x704     0x708     0x4       
+_USB_STORAGE_XRAM$RD$USB_Addr                                    0x708     0x70c     0x4       
+_USB_STORAGE_XRAM$RD$USBTag                                      0x70c     0x710     0x4       
+_USB_STORAGE_XRAM$RD$USBLen                                      0x710     0x714     0x4       
+_USB_MS_XRAM$RD$usb_attach_time                                  0x714     0x718     0x4       
+_USB_MS_XRAM$RD$time_count                                       0x718     0x71c     0x4       
+_SYSTEM_DATA$RD$system_check_timer                               0x71c     0x720     0x4       
+_SYSTEM_DATA$RD$sleep_mode_timer                                 0x720     0x724     0x4       
+_SYSTEM_DATA$RD$qieqing_timer                                    0x724     0x728     0x4       
+_SYSTEM_DATA$RD$play_file_size                                   0x728     0x72c     0x4       
+_SYSTEM_DATA$RD$mp3_begin_add                                    0x72c     0x730     0x4       
+_SYSTEM_DATA$RD$led_timer                                        0x730     0x734     0x4       
+_SYSTEM_DATA$RD$g_timer_tick                                     0x734     0x738     0x4       
+_SYSTEM_DATA$RD$g_system_clk_timer                               0x738     0x73c     0x4       
+_SYSTEM_DATA$RD$adc_timer                                        0x73c     0x740     0x4       
+_SPIF_XRAM$RD$pSPIFBusyCallBackFunc                              0x740     0x744     0x4       
+_SPIF_XRAM$RD$SPIF_resv_TotalSector                              0x744     0x748     0x4       
+_SPIF_XRAM$RD$SPIF_FAT_TotalSector                               0x748     0x74c     0x4       
+_SPIF_XRAM$RD$SPIF_FAT_StartSector                               0x74c     0x750     0x4       
+_SDTL_XRAM$RD$SD1_RES_TotalSector                                0x750     0x754     0x4       
+_SDTL_XRAM$RD$SD1_FAT_TotalSector                                0x754     0x758     0x4       
+_SDTL_XRAM$RD$SD1_FAT_StartSector                                0x758     0x75c     0x4       
+_ADC_MAIN_DATA_                                                  0x75c     0x760     0x4       
+_XRAM$RD$usb_count                                               0x760     0x762     0x2       
+_XRAM$RD$sd1_rw                                                  0x762     0x764     0x2       
+_XRAM$RD$sd1_num                                                 0x764     0x766     0x2       
+_XRAM$RD$sd1_cache_use                                           0x766     0x768     0x2       
+_XRAM$RD$sd1_buf                                                 0x768     0x76a     0x2       
+_XRAM$RD$g_b_poweroff_activated                                  0x76a     0x76c     0x2       
+_XRAM$RD$g_b_autopoweroff_forbidden                              0x76c     0x76e     0x2       
+_USB_STORAGE_XRAM$RD$usb_max_lun                                 0x76e     0x770     0x2       
+_USB_STORAGE_XRAM$RD$usb_devMode                                 0x770     0x772     0x2       
+_USB_STORAGE_XRAM$RD$USBStall                                    0x772     0x774     0x2       
+_USB_STORAGE_XRAM$RD$USBLun                                      0x774     0x776     0x2       
+_USB_STORAGE_XRAM$RD$UFI_Err                                     0x776     0x778     0x2       
+_USB_MS_XRAM$RD$vid_data                                         0x778     0x77a     0x2       
+_USB_MS_XRAM$RD$usb_core_status                                  0x77a     0x77c     0x2       
+_USB_MS_XRAM$RD$lidian_flag                                      0x77c     0x77e     0x2       
+_USB_MS_XRAM$RD$g_exit_usb                                       0x77e     0x780     0x2       
+_USB_MS_XRAM$RD$flag_chongdian                                   0x780     0x782     0x2       
+_USB_MS_XRAM$RD$b_usb_detection                                  0x782     0x784     0x2       
+_USB_MS_XRAM$RD$adpate_flag                                      0x784     0x786     0x2       
+_SYSTEM_DATA$RD$vol_idx_bak                                      0x786     0x788     0x2       
+_SYSTEM_DATA$RD$speaker_vol                                      0x788     0x78a     0x2       
+_SYSTEM_DATA$RD$sleep_mode_count                                 0x78a     0x78c     0x2       
+_SYSTEM_DATA$RD$low_num                                          0x78c     0x78e     0x2       
+_SYSTEM_DATA$RD$heigh_num                                        0x78e     0x790     0x2       
+_SYSTEM_DATA$RD$gOidXOR_Key                                      0x790     0x792     0x2       
+_SYSTEM_DATA$RD$flag_wav_play                                    0x792     0x794     0x2       
+_SYSTEM_DATA$RD$flag_tishi                                       0x794     0x796     0x2       
+_SYSTEM_DATA$RD$flag_creat                                       0x796     0x798     0x2       
+_SYSTEM_DATA$RD$battery_count                                    0x798     0x79a     0x2       
+_SYSTEM_DATA$RD$adc_channel                                      0x79a     0x79c     0x2       
+_SYSTEM_DATA$RD$OID_PLAY                                         0x79c     0x79e     0x2       
+_SYSTEM_DATA$RD$DAC_Out                                          0x79e     0x7a0     0x2       
+_SYSTEM_DATA$RD$ADPCM_File                                       0x7a0     0x7a2     0x2       
+_SPIF_XRAM$RD$SPIF_CLK                                           0x7a2     0x7a4     0x2       
+_SPIF_XRAM$RD$SPIF_BUSY                                          0x7a4     0x7a6     0x2       
+_SDTL_XRAM$RD$SD1_Mounted                                        0x7a6     0x7a8     0x2       
+COMMON_XRAM                                                      0x1092    0x12a4    0x212     
+USB_driver_XRAM1                                                 0x2944    0x31f4    0x8b0     
+USB_API_XRAM                                                     0x31f4    0x31fc    0x8       
+USB_driver_XRAM2                                                 0x31fc    0x3250    0x54      
+SD_XRAM                                                          0x3250    0x348e    0x23e     
+_XRAM$RD$sd1_8k_buf                                              0x348e    0x548e    0x2000    
+_XRAM$AD$g_paster_dir                                            0x6da6    0x6de2    0x3c      
+_XRAM$AD$cluster_buf                                             0x6de2    0x6f02    0x120     
+_XRAM$AD$all_mp3_num                                             0x6f02    0x6f04    0x2       
+_XRAM$AD$sys_flag                                                0x6f04    0x6f06    0x2       
+_XRAM$AD$current_mp3_sd                                          0x6f06    0x6f08    0x2       
+_XRAM$AD$current_area                                            0x6f08    0x6f0a    0x2       
+_XRAM$AD$current_playmp3_number                                  0x6f0a    0x6f0c    0x2       
+_XRAM$AD$sd2_ap3_number                                          0x6f0c    0x6f0e    0x2       
+_XRAM$AD$current_sd                                              0x6f0e    0x6f10    0x2       
+_XRAM$AD$t01_calib_data1                                         0x6f10    0x6f14    0x4       
+_XRAM$AD$t01_calib_data2                                         0x6f14    0x6f18    0x4       
+_XRAM$AD$gflag                                                   0x6f18    0x6f1a    0x2       
+_XRAM$AD$vol_idx                                                 0x6f1a    0x6f1c    0x2       
+_XRAM$AD$ap3_file_number                                         0x6f1c    0x6f1e    0x2       
+_XRAM$AD$ap4_mp3_flag                                            0x6f1e    0x6f20    0x2       
+_XRAM$AD$Current_Record                                          0x6f20    0x6f28    0x8       
+_XRAM$AD$volume_inc_flag                                         0x6f28    0x6f2a    0x2       
+_XRAM$AD$bak_current_index                                       0x6f2a    0x6f2c    0x2       
+_XRAM$AD$systerm_flag                                            0x6f2c    0x6f2e    0x2       
+_XRAM$AD$rev1Flag                                                0x6f2e    0x6f30    0x2       
+_XRAM$AD$t01_calib_data3                                         0x6f30    0x6f32    0x2       
+_XRAM$AD$prev_task                                               0x6f32    0x6f34    0x2       
+_XRAM$AD$g_string2                                               0x6f34    0x6f70    0x3c      
+_XRAM$AD$remote_index_tab                                        0x6f70    0x6ff0    0x80      
+_XRAM$AD$wav_action                                              0x6ff0    0x6ff2    0x2       
+_XRAM$AD$current_wav_num                                         0x6ff2    0x6ff4    0x2       
+_XRAM$AD$adc0_value                                              0x6ff4    0x6ff6    0x2       
+_XRAM$AD$adc2_value                                              0x6ff6    0x6ff8    0x2       
+_XRAM$AD$adc3_value                                              0x6ff8    0x6ffa    0x2       
+_XRAM$AD$adc7_value                                              0x6ffa    0x6ffc    0x2       
+_XRAM$AD$rev_int_1                                               0x6ffc    0x6ffe    0x2       
+_XRAM$AD$rev_int_2                                               0x6ffe    0x7000    0x2       
+
+SPACE_ROM
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+IP_ROM                                                           0x30000   0x40000   0x10000   
+
+SPACE_IRAM
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$_entry                                      0x10000   0x10004   0x4       
+__multi_debugger                                                 0x10004   0x10008   0x4       
+IP_JUMP_TABLE                                                    0x10100   0x10214   0x114     
+_$UFI_Dispatch                                                   0x10214   0x105e2   0x3ce     
+SD_INIT                                                          0x105e2   0x1090c   0x32a     
+_$USBCoreInit                                                    0x1090c   0x10c28   0x31c     
+SDK_loadCode                                                     0x10c28   0x10e82   0x25a     
+_$sd1_mount                                                      0x10e82   0x110ae   0x22c     
+SD_CMD                                                           0x110ae   0x11290   0x1e2     
+SPIF_Command                                                     0x11290   0x11460   0x1d0     
+_$do_request_sense                                               0x11460   0x1162c   0x1cc     
+_TEXT$main                                                       0x1162c   0x117c2   0x196     
+_$usb_stor_Data_TX_DMA                                           0x117c2   0x11948   0x186     
+_$USBStorageRegister                                             0x11948   0x11aba   0x172     
+_$sd1_cache_read                                                 0x11aba   0x11c2a   0x170     
+_$do_inquiry                                                     0x11c2a   0x11d7c   0x152     
+_$usb_stor_ep0_class_request                                     0x11d7c   0x11eb2   0x136     
+_$sd1_cache_write                                                0x11eb2   0x11fe8   0x136     
+_$spif_mount                                                     0x11fe8   0x1211c   0x134     
+_$do_read_format_capacity                                        0x1211c   0x12234   0x118     
+_$usb_stor_Data_TX_PIO                                           0x12234   0x1233e   0x10a     
+_$sd1_write_cache                                                0x1233e   0x12448   0x10a     
+_$USBStorageInit2                                                0x12448   0x12552   0x10a     
+_$$linker_generated$$adhereto_host_info_table                    0x12552   0x1265c   0x10a     
+_$adc_get                                                        0x1265c   0x12762   0x106     
+SPI_Flash_Init                                                   0x12762   0x12860   0xfe      
+CopyYRAMtoIRAM                                                   0x12860   0x1295e   0xfe      
+_$do_read_capacity                                               0x1295e   0x12a5a   0xfc      
+_$usb_stor_CSW_TX                                                0x12a5a   0x12b4e   0xf4      
+USB_STORAGE_IRAM                                                 0x12b4e   0x12c36   0xe8      
+_$BatteryDetect                                                  0x12c36   0x12d1c   0xe6      
+_$do_read_TOC                                                    0x12d1c   0x12df6   0xda      
+_$System_Timer3_Init                                             0x12df6   0x12ece   0xd8      
+_$MassStorage_Loop                                               0x12ece   0x12fa4   0xd6      
+_$sDMA_RX_Backend                                                0x12fa4   0x13072   0xce      
+LIBC_code                                                        0x13072   0x1313e   0xcc      
+_$do_mode_sense                                                  0x1313e   0x13208   0xca      
+_$do_test_unit_ready                                             0x13208   0x132ce   0xc6      
+_$key_down                                                       0x132ce   0x13392   0xc4      
+_$usb_stor_Data_RX_DMA                                           0x13392   0x1344a   0xb8      
+_$usbdc_loop_fix                                                 0x1344a   0x134fa   0xb0      
+_$SpeakDetect                                                    0x134fa   0x135aa   0xb0      
+SPI_Flash_Code                                                   0x135aa   0x13654   0xaa      
+SD_Read_Write                                                    0x13654   0x136f6   0xa2      
+_$do_mode_sense_cdrom                                            0x136f6   0x13784   0x8e      
+_$MassStorage_SD1_Register                                       0x13784   0x13812   0x8e      
+_$usb_stor_CBW_RX                                                0x13812   0x1389c   0x8a      
+_$TIMER0_ISR                                                     0x1389c   0x13926   0x8a      
+_$send_hex_u32                                                   0x13926   0x139aa   0x84      
+_$inc_volume                                                     0x139aa   0x13a2e   0x84      
+_$USBWriteCommit                                                 0x13a2e   0x13aaa   0x7c      
+_$usb_class_request_fix                                          0x13aaa   0x13b24   0x7a      
+_$__usbtimer                                                     0x13b24   0x13b9e   0x7a      
+_$Exception                                                      0x13b9e   0x13c18   0x7a      
+_$SPIF_Clear_Busy                                                0x13c18   0x13c88   0x70      
+_$usb_ep1_rx_isr1                                                0x13c88   0x13cf4   0x6c      
+_$SendString                                                     0x13cf4   0x13d5a   0x66      
+_$power_authorize_autopoweroff                                   0x13d5a   0x13dbe   0x64      
+_ADC_MAIN_CODE_                                                  0x13dbe   0x13e20   0x62      
+_$CheckUSB                                                       0x13e20   0x13e82   0x62      
+_$usb_isr_fix                                                    0x13e82   0x13ee2   0x60      
+_$USBFunctionRegister                                            0x13ee2   0x13f42   0x60      
+_$UFI_Set_Addr                                                   0x13f42   0x13fa2   0x60      
+_$SysClkUpgrade                                                  0x13fa2   0x13ffe   0x5c      
+_SGV_INIT_CODE                                                   0x13ffe   0x14058   0x5a      
+_$usb_stor_Vendor_Reset                                          0x14058   0x140b0   0x58      
+_$usb_class_request_tx_backend                                   0x140b0   0x14108   0x58      
+_$sDMA_TX_Backend                                                0x14108   0x14160   0x58      
+_$clk_time_dowith                                                0x14160   0x141b8   0x58      
+_$usb_epx_tx_isr                                                 0x141b8   0x1420e   0x56      
+_$clkup_time                                                     0x1420e   0x14262   0x54      
+NEWMACRO                                                         0x14262   0x142b6   0x54      
+_$SysClkDowngrade                                                0x142b6   0x14306   0x50      
+_$usb_register_interface_func                                    0x14306   0x14354   0x4e      
+_$usb_register_class_func                                        0x14354   0x143a2   0x4e      
+_$send_hex_byte                                                  0x143a2   0x143f0   0x4e      
+_$op_time_dowith                                                 0x143f0   0x1443e   0x4e      
+_$time3_init                                                     0x1443e   0x1448a   0x4c      
+_$usb_class_request_rx_backend                                   0x1448a   0x144d4   0x4a      
+IP_IRAM_code                                                     0x144d4   0x1451c   0x48      
+_USB_STORAGE_CODE$RD$kTOC_DATA2                                  0x1451c   0x14562   0x46      
+_$usb_ep_init_interrupt_ep                                       0x14562   0x145a6   0x44      
+KBDM9_CLOCK_DRV_CODE                                             0x145a6   0x145ea   0x44      
+_$usb_stor_flush                                                 0x145ea   0x1462c   0x42      
+_$send_hex_u16                                                   0x1462c   0x1466c   0x40      
+_$_usb_init_interface_func                                       0x1466c   0x146ac   0x40      
+_$MassStorage_Init                                               0x146ac   0x146ec   0x40      
+_$USBStorageUninit                                               0x146ec   0x14728   0x3c      
+_$usb_stor_get_size                                              0x14728   0x14762   0x3a      
+_$sd1_cache8k_init                                               0x14762   0x1479c   0x3a      
+_$MassStorage_Registers                                          0x1479c   0x147d6   0x3a      
+_USB_MS_CODE$RD$USB_MassStorage_c$                               0x147d6   0x1480e   0x38      
+_$usb_stor_Vendor_Clear_Feature                                  0x1480e   0x14846   0x38      
+_$send_hex_u8                                                    0x14846   0x1487e   0x38      
+_$conv                                                           0x1487e   0x148b6   0x38      
+USB_MS_CODE$__INIT$copy                                          0x148b6   0x148ec   0x36      
+_SYSTEM_CODE$RD$SYSTEM_C$                                        0x148ec   0x1491e   0x32      
+_$system_reset                                                   0x1491e   0x14950   0x32      
+_$judge_op                                                       0x14950   0x14980   0x30      
+_$timer_check_timeout                                            0x14980   0x149ae   0x2e      
+_$USBCoreUninit                                                  0x149ae   0x149dc   0x2e      
+_$SendByte                                                       0x149dc   0x14a08   0x2c      
+_$sd1_cache_flush                                                0x14a08   0x14a32   0x2a      
+_$usb_stor_get_type                                              0x14a32   0x14a5a   0x28      
+_$usb_get_write                                                  0x14a5a   0x14a82   0x28      
+_$usb_get_read                                                   0x14a82   0x14aaa   0x28      
+_$usd1_write                                                     0x14aaa   0x14ad0   0x26      
+CCAAC                                                            0x14ad0   0x14af6   0x26      
+_$timer_get_time                                                 0x14af6   0x14b18   0x22      
+_$do_start_stop_unit                                             0x14b18   0x14b3a   0x22      
+_$UART_Init                                                      0x14b3a   0x14b5c   0x22      
+_$CommonLoadCode                                                 0x14b5c   0x14b7c   0x20      
+_$$linker_generated$$_boost                                      0x14b7c   0x14b9c   0x20      
+_fmemcpys64k_                                                    0x14b9c   0x14bba   0x1e      
+_$USBCoreLoop                                                    0x14bba   0x14bd8   0x1e      
+_USB_STORAGE_CODE$RD$MODE_SENSE_PAGE2A                           0x14bd8   0x14bf4   0x1c      
+_$USBStorageInit                                                 0x14bf4   0x14c10   0x1c      
+_USB_MS_CODE$RD$USB_MassStorage_SD1_c$                           0x14c10   0x14c2a   0x1a      
+_$usd1_status                                                    0x14c2a   0x14c42   0x18      
+_$MassStorage_Write                                              0x14c42   0x14c5a   0x18      
+_$MassStorage_SD1_Init                                           0x14c5a   0x14c72   0x18      
+_USB_STORAGE_CODE$RD$kTOC_DATA0                                  0x14c72   0x14c86   0x14      
+_$MassStorage_Exit                                               0x14c86   0x14c98   0x12      
+_BATTERY_CODE$RD$SYSTEM_C$                                       0x14c98   0x14ca8   0x10      
+_$usb_stor_CSW_TX_end                                            0x14ca8   0x14cb8   0x10      
+_$power_forbid_autopoweroff                                      0x14cb8   0x14cc8   0x10      
+SDTL_ConverDWord                                                 0x14cc8   0x14cd8   0x10      
+_USB_MS_CODE$RD$USB_MassStorage_config_c$                        0x14cd8   0x14ce6   0xe       
+_$sd1_fat_size                                                   0x14ce6   0x14cf4   0xe       
+_USB_STORAGE_CODE$RD$kTOC_DATA1                                  0x14cf4   0x14d00   0xc       
+_$do_mode_select                                                 0x14d00   0x14d0c   0xc       
+SPI_Flash_TBL                                                    0x14d0c   0x14d18   0xc       
+_SYSTEM_CODE$RD$VolTbl                                           0x14d18   0x14d22   0xa       
+_SYSTEM_CODE$RD$SpeakerTbl                                       0x14d22   0x14d2c   0xa       
+_$USBCoreStatus                                                  0x14d2c   0x14d36   0xa       
+_$usd1_protect                                                   0x14d36   0x14d3e   0x8       
+_$usb_empty_error_func                                           0x14d3e   0x14d46   0x8       
+_$vol_inc                                                        0x14d46   0x14d4c   0x6       
+_$vol_dec                                                        0x14d4c   0x14d52   0x6       
+_$USBStorageSetStatus                                            0x14d52   0x14d58   0x6       
+_$MassStorage_SD1_Loop                                           0x14d58   0x14d5e   0x6       
+_$lidian_flag                                                    0x14d5e   0x14d60   0x2       
+_$SPIF_CLK                                                       0x14d60   0x14d62   0x2       
+_$SPIF_BUSY                                                      0x14d62   0x14d64   0x2       
+_$SD1_Mounted                                                    0x14d64   0x14d66   0x2       
+
+SPACE_DPRAM
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+PCMv2FlagRAM                                                     0xf200    0xf202    0x2       
+
+FAT_TEMP_CODE17
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE17               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE16
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE16               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE15
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE15               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE14
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE14               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE13
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE13               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE12
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE12               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE11
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE11               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE10
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE10               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE09
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE09               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE08
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE08               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE07
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE07               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE06
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE06               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE05
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE05               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE04
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE04               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE03
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE03               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE02
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE02               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE01
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE01               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+FAT_TEMP_CODE00
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_FAT_TEMP_CODE00               0x1c100   0x1c130   0x30      
+_SGV_INIT_CODE                                                   0x1c130   0x1c132   0x2       
+
+DAC_TEMP_CODE02
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_DAC_TEMP_CODE02               0x1b900   0x1b930   0x30      
+_SGV_INIT_CODE                                                   0x1b930   0x1b932   0x2       
+
+DAC_TEMP_CODE01
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_DAC_TEMP_CODE01               0x1b900   0x1b930   0x30      
+PCMv2GoCode                                                      0x1b930   0x1bbc6   0x296     
+PCMv2GoCodeTable                                                 0x1bbc6   0x1bbce   0x8       
+_SGV_INIT_CODE                                                   0x1bbce   0x1bbd0   0x2       
+
+DAC_TEMP_CODE00
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_DAC_TEMP_CODE00               0x1b900   0x1b930   0x30      
+PCMv2_InitCode                                                   0x1b930   0x1ba8a   0x15a     
+_$DAC_Init_                                                      0x1ba8a   0x1bb36   0xac      
+_SGV_INIT_CODE                                                   0x1bb36   0x1bb38   0x2       
+
+DAC_COMMON_CODE
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+_$$linker_generated$$adhere_header_DAC_COMMON_CODE               0x1bc00   0x1bc30   0x30      
+PCMv2ISR                                                         0x1bc30   0x1bfd2   0x3a2     
+DAC_CODE                                                         0x1bfd2   0x1c00a   0x38      
+LoadTemp2                                                        0x1c00a   0x1c022   0x18      
+LoadTemp1                                                        0x1c022   0x1c03a   0x18      
+LoadTemp0                                                        0x1c03a   0x1c052   0x18      
+PCM_TableROM                                                     0x1c052   0x1c062   0x10      
+DACInit                                                          0x1c062   0x1c06a   0x8       
+_SGV_INIT_CODE                                                   0x1c06a   0x1c06c   0x2       
+
+SPACE_SFR
+area                                                             begin     end       size      
+---------------------                                            ------    ------    ------    
+REG_DEF_AREA                                                     0xf120    0xf300    0x1e0     
+

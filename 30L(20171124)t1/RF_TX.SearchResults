@@ -1,0 +1,4 @@
+---- RF_IRQ_OD Matches (3 in 2 files) ----
+E2radio.h (fw\wire_less_oid\wireless):#define RF_IRQ_OD     (_PCOD_b0+5)
+Wireless_oid_main.c (fw\wire_less_oid):		_bitCLR(RF_IRQ_OD);  // Set FR_RST is Low.
+Wireless_oid_main.c (fw\wire_less_oid):		_bitSET(RF_IRQ_OD);  // Set FR_RST is Low.

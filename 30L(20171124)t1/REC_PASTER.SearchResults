@@ -1,0 +1,5 @@
+---- ADC_Buf1 Matches (4 in 1 files) ----
+Example_ADPCM_Record.c (fw\record\record_to_paster)://__X int ADC_Buf1[PCM_BUF_SIZE];
+Example_ADPCM_Record.c (fw\record\record_to_paster):		ADC_Buf1[i] = 0;
+Example_ADPCM_Record.c (fw\record\record_to_paster):	AUADC_Set_Buffer((__X int *)ADC_Buf1, (__X int *)ADC_Buf2, PCM_BUF_SIZE);
+Example_ADPCM_Record.c (fw\record\record_to_paster)://	AUADC_Set_Buffer((__X int *)ADC_Buf1, (__X int *)ADC_Buf2, PCM_BUF_SIZE);

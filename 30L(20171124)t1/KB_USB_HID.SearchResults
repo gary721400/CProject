@@ -1,0 +1,5 @@
+---- updata_fw Matches (4 in 1 files) ----
+Usb_hid_cfg.c (fw\usb_massstorage_project\usb_hid_demo_code):Bool updata_fw(void);
+Usb_hid_cfg.c (fw\usb_massstorage_project\usb_hid_demo_code)://		(void)updata_fw();
+Usb_hid_cfg.c (fw\usb_massstorage_project\usb_hid_demo_code):		if(updata_fw())
+Usb_hid_cfg.c (fw\usb_massstorage_project\usb_hid_demo_code):Bool updata_fw(void)

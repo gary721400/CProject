@@ -1,0 +1,7 @@
+---- ADBVersion Matches (6 in 2 files) ----
+Dic_remote.c (fw\ap4\dic):   _MEM_TYPE_SLOW_   U8                    ADBVersion;   
+Dic_remote.c (fw\ap4\dic):	  	(void)file_read_buf(( U8 _MEM_TYPE_SLOW_ *)&ADBVersion, sizeof(U8));
+Dic_remote.c (fw\ap4\dic):	  	 ADBVersion=2;
+Dic_remote.c (fw\ap4\dic):	if(ADBVersion==2){
+Dic_remote.c (fw\ap4\dic):	else if(ADBVersion==3){
+Dic_search.c (fw\ap4\dic):		send_hex_u8(ADBVersion);

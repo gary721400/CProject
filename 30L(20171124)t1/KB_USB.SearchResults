@@ -1,0 +1,7 @@
+---- PWD_Key_Press Matches (6 in 3 files) ----
+Example_USB_MassStorage.c (fw\usb_massstorage_project\demo_code):		if(PWD_Key_Press())
+Power.h (fw\include):#define PWD_Key_Press()	(false)//(_bit_get(KBD_PWR_ID))
+Power.h (fw\include)://#define PWD_Key_Press()		((adc3_value < (POWER_DATA+Begin_Offset))&&(adc3_value > (POWER_DATA-Begin_Offset)))
+Power.h (fw\include)://#define PWD_Key_Press()		(!_bit_get(KBD_PWR_ID))
+Power.h (fw\include)://#define PWD_Key_Press()		(adc2_value>100)
+USB_MassStorage.c (fw\usbmassstoragev1.1\src):		if(PWD_Key_Press())

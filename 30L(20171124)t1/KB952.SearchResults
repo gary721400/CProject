@@ -1,0 +1,22 @@
+---- clkup_time Matches (21 in 6 files) ----
+Mmi_ap3.c (fw\ap4\mmi\ap3):				clkup_time(FALSE);
+Mmi_ap3.c (fw\ap4\mmi\ap3):		clkup_time(true);
+Mmi_ap3.c (fw\ap4\mmi\ap3):		clkup_time(FALSE);
+Mmi_ap3.c (fw\ap4\mmi\ap3):		clkup_time(TRUE);
+Mmi_ap3.c (fw\ap4\mmi\ap3):		clkup_time(TRUE);
+Oid.c (fw\library\oid):   	 clkup_time(TRUE);
+Oid.c (fw\library\oid):		 clkup_time(TRUE);
+Player_ap3.c (fw\ap4\modules\player_ap3):		clkup_time(FALSE);
+Player_ap3.c (fw\ap4\modules\player_ap3):		//clkup_time(FALSE);
+Player_ap3.c (fw\ap4\modules\player_ap3):	clkup_time(TRUE);
+Search.c (fw\ap4\modules\search):		if(!player_ap3_is_busy())clkup_time(TRUE);
+Search.c (fw\ap4\modules\search):	  clkup_time(TRUE);
+Search.c (fw\ap4\modules\search):	   clkup_time(FALSE);
+Search.c (fw\ap4\modules\search):	   clkup_time(TRUE);
+Search.c (fw\ap4\modules\search):	   clkup_time(FALSE);
+Search.c (fw\ap4\modules\search):	   clkup_time(TRUE);
+Search.c (fw\ap4\modules\search):	clkup_time(TRUE);
+System.c (fw\library\system): 	clkup_time(FALSE);
+System.c (fw\library\system):void clkup_time(Bool flag_on)
+System.c (fw\library\system):				clkup_time(FALSE);
+System.h (fw\library\system):void  clkup_time(Bool flag_on);

@@ -1,0 +1,345 @@
+space
+{
+	XRAM 0x0 0x7000
+	{
+		SPACE_XRAM 0x0 0x7000 : stack 0x0 0xA00 ; 
+		MP3_CACHE_XRAM = SPACE_XRAM;
+		MP3_LDB_XRAM     = SPACE_XRAM;
+		MP3_RDB_XRAM     = SPACE_XRAM;
+		
+		  AP4_MAIN_DATA = SPACE_XRAM;
+//			COM_VAR_DATA = SPACE_XRAM;
+//			CUE_DATA = SPACE_XRAM;
+			FILE_DATA = SPACE_XRAM;
+//			FILELIST_DATA = SPACE_XRAM;
+//			FILESEARCH_DATA = SPACE_XRAM;
+			FILESEARCH_DATA = SPACE_XRAM;
+			FILE_AUX_DATA = SPACE_XRAM;
+			FS_PATCH_DATA = SPACE_XRAM;
+			FS_VAR_DATA = SPACE_XRAM;
+//			EXPLORER_DATA = SPACE_XRAM;
+//			IMG_HANDLER_DATA = SPACE_XRAM;
+			KEYPAD_DATA = SPACE_XRAM;
+			KEYPAD_DRV_DATA = SPACE_XRAM;
+//			MAIL_DATA = SPACE_XRAM;
+			MMGR_KERNEL_DATA = SPACE_XRAM;
+			MMI_AP3_DATA = SPACE_XRAM;
+FSD2_DRIVER_DATA  = SPACE_XRAM;
+		FSD1_DRIVER_DATA  = SPACE_XRAM;
+			OID_DATA = SPACE_XRAM;
+//			PASTER_TASK_DATA = SPACE_XRAM;
+//			PLAYER_DATA = SPACE_XRAM;
+			PLAYER_AP3_DATA = SPACE_XRAM;
+			PLAYER_TASK_DATA = SPACE_XRAM;
+			POWER_DATA = SPACE_XRAM;
+//			POWER_TASK_DATA = SPACE_XRAM;
+//			RECORDER_TASK_DATA = SPACE_XRAM;
+			SCHEDULER_DATA = SPACE_XRAM;
+			SEARCH_DATA = SPACE_XRAM;
+			SEARCH_GAME_DATA = SPACE_XRAM;
+			SEARCH_REMOTE_DATA = SPACE_XRAM;
+			SEARCH_TASK_DATA = SPACE_XRAM;
+//			SRV_PLAYER_DATA = SPACE_XRAM;
+//			SRV_RECORDER_DATA = SPACE_XRAM;
+			STRING_1_DATA = SPACE_XRAM;
+			TIMER_DRV_DATA = SPACE_XRAM;
+//			TIMER_SOFT_DATA = SPACE_XRAM;
+			UNICODE_DATA = SPACE_XRAM;
+			UNICODE_STRING_DATA = SPACE_XRAM;
+//			USB_TASK_SCH_DATA = SPACE_XRAM;
+//			NAVIGATION_DATA = SPACE_XRAM;
+			
+			SDTL_XRAM = SPACE_XRAM;
+			FSSD_DRIVER_DATA = SPACE_XRAM;
+			FS_DATA = SPACE_XRAM;
+			SPIF_XRAM = SPACE_XRAM;
+			FAT_DATA = SPACE_XRAM;
+			
+			MP3_API_XRAM = SPACE_XRAM;
+			BITSTREAM_BUF_CIRC_XRAM = SPACE_XRAM;
+			DAC_XRAM = SPACE_XRAM;
+		  CATCH_BUF_CIRC_XRAM     = SPACE_XRAM;
+		  ADC_MAIN_DATA	 		= SPACE_XRAM;
+		  READ_OID_SOUND_DATA = SPACE_XRAM;
+//		  STRCAST_DATA = SPACE_XRAM;
+			WAV_REC_DATA = SPACE_XRAM;
+		  ADPCM_XRAM = SPACE_XRAM;
+		  AUADC_XRAM = SPACE_XRAM;
+		  RP_RECORD_DATA = SPACE_XRAM;
+		  ADPCM_RECORD_DATA = SPACE_XRAM;
+		  AGC_XRAM = SPACE_XRAM;
+		  SYSTEM_DATA = SPACE_XRAM;
+			
+	}
+	YRAM 0x8000 0x3000
+	{
+		SPACE_YRAM 0x0 0x3000;
+		MP3_LDB_YRAM     = SPACE_YRAM;
+		LCM_DRIVER_XYRAM = SPACE_YRAM;
+		MP3_API_XYAM     = SPACE_YRAM;
+	}
+	SFR 0xF100 0xF00
+	{
+		SPACE_SFR 0x0 0xF00 ;
+	}
+	DPRAM 0xF200 0xA
+	{
+		SPACE_DPRAM 0x0 0xA ;
+		
+		DAC_DPRAM = SPACE_DPRAM;
+		AUADC_DPRAM = SPACE_DPRAM;
+	}
+	IROM 0x30000 0x10000
+	{
+		SPACE_ROM 0x0 0x10000 ;
+	}
+	IRAM 0x10000 0xD000
+	{
+		SPACE_IRAM 0x0 0x9070 : interrupt 0x0 0x100 ,image ; 
+		
+		  SYSTEM_CODE = SPACE_IRAM;
+		  KBDMCC = SPACE_IRAM;
+			AP4_MAIN_CODE = SPACE_IRAM;
+			UART_CODE = SPACE_IRAM;
+			FILE_CODE = SPACE_IRAM;
+			FS_PATCH_CODE = SPACE_IRAM;
+			KEYPAD_CODE = SPACE_IRAM;
+			KEYPAD_DRV_CODE = SPACE_IRAM;
+			MMGR_KERNEL_CODE = SPACE_IRAM;
+			OID_CODE = SPACE_IRAM;
+			PLAYER_AP3_CODE = SPACE_IRAM;
+			PLAYER_TASK_CODE = SPACE_IRAM;
+			
+			SEARCH_CODE = SPACE_IRAM;
+			SEARCH_GAME_CODE = SPACE_IRAM;
+
+			
+
+			ADC_MAIN_CODE   = SPACE_IRAM;
+			
+
+			
+
+
+   			LIBC = SPACE_IRAM;
+
+			//AGC_Init_Code = SPACE_IRAM;
+			//AGC_Code = SPACE_IRAM;
+			
+			SYSDRV_CODE = SPACE_IRAM;
+			SDTL_CODE = SPACE_IRAM;
+			SPIF_CODE = SPACE_IRAM;
+
+			MMI_AP3_CODE	= SPACE_IRAM;
+			
+			BATTERY_CODE = SPACE_IRAM;
+
+  			//IMA_Table = SPACE_IRAM;
+     		//IMA_Encode_Code = SPACE_IRAM;
+     		//IMA_Decode_Code = SPACE_IRAM;	
+
+			FAT_COMMON_CODE = SPACE_IRAM;
+
+			//READ_OID_SOUND_CODE					0x9400 0x370 : image ,adhereto VIRTUAL_SPACE;
+			
+			OPEN_NEWAP4_CODE					0x9070 0x200 : image ,adhereto VIRTUAL_SPACE;//选书打开新的文件
+
+			REMOTE_INDEX_CODE					0x9270 0x300 : image ,adhereto VIRTUAL_SPACE;//遥控器搜索
+			SEARCH_OPEN_AP4_CODE00				0x9270 0x300 : image ,adhereto VIRTUAL_SPACE;
+			//FIND_PASS_01_CODE					0x9270 0x300 : image ,adhereto VIRTUAL_SPACE;
+			//FIND_PASS_02_CODE					0x9270 0x300 : image ,adhereto VIRTUAL_SPACE;
+			//FIND_PASS_01_CODE					0x9270 0x300 : image ,adhereto VIRTUAL_SPACE;
+
+			
+			FIX_INDEX_CODE01					0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;
+			FIX_INDEX_CODE02					0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;
+			FIX_INDEX_CODE03					0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;
+			FIX_INDEX_CODE04					0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;
+			FIX_INDEX_CODE05					0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;
+			FIX_INDEX_CODE06					0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;
+			FIX_INDEX_CODE07					0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;
+			FIX_INDEX_CODE08					0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;
+			FIX_INDEX_CODE09					0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;
+			FIX_INDEX_CODE10					0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;
+			
+			BANKTOAP4_CODE						0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;//返回点读，处理
+			CHANGE_CON_MODE_CODE				0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;//切换mode，一般通过按键切换
+			BACK_BAK_DOWITH_CODE				0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;//从其他模式返回时候的处理
+			MAKE_SD_DIR_CODE					0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;//找到ap4目录的短路径名称
+			TRANSLATE_CODE						0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;//按键翻译功能处理
+			JIAMI_CODE							0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;//
+			//NEW_READ_ALLNEWS_CODE				0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;//
+			FIND_PASS_01_CODE					0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;
+			FIND_PASS_02_CODE					0x9570 0x200 : image ,adhereto VIRTUAL_SPACE;
+			
+
+			
+			TISHI_MP3_CODE						0x9770 0x200 : image ,adhereto VIRTUAL_SPACE;
+			JUDGE_COOR01_CODE					0x9770 0x200 : image ,adhereto VIRTUAL_SPACE;
+			JUDGE_COOR02_CODE					0x9770 0x200 : image ,adhereto VIRTUAL_SPACE;
+			//JUDGE_COOR03_CODE					0x9770 0x200 : image ,adhereto VIRTUAL_SPACE;
+			//WAV_REC_PLAY_CODE					0x9770 0x200 : image ,adhereto VIRTUAL_SPACE;
+			//SEARCH_OPEN_AP4_CODE00				0x9770 0x200 : image ,adhereto VIRTUAL_SPACE;
+			SEARCH_OPEN_AP4_CODE01				0x9770 0x200 : image ,adhereto VIRTUAL_SPACE;
+			ADDR_BAK_CODE						0x9770 0x200 : image ,adhereto VIRTUAL_SPACE;
+			REMOTE_CHANGEPRO_CODE				0x9770 0x200 : image ,adhereto VIRTUAL_SPACE;
+			//--------------------------------------------------------------------------------
+			READ_SGDB_CODE					    0x9770 0x600 : image ,adhereto VIRTUAL_SPACE;
+			
+//============================================================================
+			
+			MMGR_KERNEL_INIT_CODE				0x9970 0x400 : image ,adhereto VIRTUAL_SPACE;
+			//READ_SGDB_CODE					    0x9970 0x400 : image ,adhereto VIRTUAL_SPACE;
+			PLAYEND_DOWITH_01_CODE				0x9970 0x400 : image ,adhereto VIRTUAL_SPACE;
+			PLAYEND_DOWITH_02_CODE				0x9970 0x400 : image ,adhereto VIRTUAL_SPACE;
+			RP_JUDGE_CODE						0x9970 0x400 : image ,adhereto VIRTUAL_SPACE;
+			JUDGE_COOR03_CODE					0x9970 0x400 : image ,adhereto VIRTUAL_SPACE;
+			READ_CONTR_NEWS_CODE				0x9970 0x400 : image ,adhereto VIRTUAL_SPACE;
+			CONTROL_NEWS_CODE					0x9970 0x400 : image ,adhereto VIRTUAL_SPACE;
+			KEYLONG_VOL_CODE					0x9970 0x400 : image ,adhereto VIRTUAL_SPACE;
+			BEGIN_FIND_AP4_CODE					0x9970 0x400 : image ,adhereto VIRTUAL_SPACE;
+			READY_OPENNEWAP4_CODE				0x9970 0x400 : image ,adhereto VIRTUAL_SPACE;
+
+			FIND_PASS_03_CODE					0x9970 0x400 : image ,adhereto VIRTUAL_SPACE;
+			
+			
+			
+		//===================gary repair=========================================
+			POWER_SYSTEM_OFF_CODE				0x9E70 0x990 : image ,adhereto VIRTUAL_SPACE;
+			REMOTE_TASK_INIT_CODE				0x9E70 0x1A90 : image ,adhereto VIRTUAL_SPACE;
+			AP3_OPEN_FILE_CODE					0x9E70 0x990 : image ,adhereto VIRTUAL_SPACE;
+			OPEN_FILE_CODE						0x9E70 0x990 : image ,adhereto VIRTUAL_SPACE;
+			DO_CHANGE_AP4_CODE					0x9E70 0x990 : image ,adhereto VIRTUAL_SPACE;
+			FIND_PATH_CODE		  				0x9E70 0x990 : image ,adhereto VIRTUAL_SPACE;
+			
+			AP4_CHOOSE_PRE_NEXT					0x9E70 0x990 : image ,adhereto VIRTUAL_SPACE;
+
+
+			
+			GAME_INITIAL_CODE					0x9E70 0x990 : image ,adhereto VIRTUAL_SPACE;
+			GAME_Script_CODE       				0x9E70 0x990 : image ,adhereto VIRTUAL_SPACE;
+			
+			//IMA_CODEC_CODE       				0x9E70 0x990 : image ,adhereto VIRTUAL_SPACE;
+			GENDU_CODEC_CODE       				0x9E70 0x190 : image ,adhereto VIRTUAL_SPACE;
+			GENDU_REC_CODE       				0xA000 0x800 : image ,adhereto VIRTUAL_SPACE;
+			GENDU_PLAY_CODE       				0xA000 0x800 : image ,adhereto VIRTUAL_SPACE;
+			
+			
+			//RP_RECORD_CODE	       				0x9E70 0x990 : image ,adhereto VIRTUAL_SPACE;
+			RP_RECORD_CODE	       				0x9E70 0x390 : image ,adhereto VIRTUAL_SPACE;
+			RP_REC_CODE      	 				0xA200 0x600 : image ,adhereto VIRTUAL_SPACE;
+			RP_PLAY_CODE       					0xA200 0x600 : image ,adhereto VIRTUAL_SPACE;
+			
+			//ADPCM_RECORD_CODE	       			0x9E70 0x990 : image ,adhereto VIRTUAL_SPACE;
+			ADPCM_RECORD_CODE      				0x9E70 0x390 : image ,adhereto VIRTUAL_SPACE;
+			ADPCM_REC_CODE      	 			0xA200 0x600 : image ,adhereto VIRTUAL_SPACE;
+			ADPCM_PLAY_CODE       				0xA200 0x600 : image ,adhereto VIRTUAL_SPACE;
+
+			GAME_SEARCH_1_CODE					0x9E70 0x1880 : image ,adhereto VIRTUAL_SPACE;
+			ANSWER_LOGIC_CONVERSE_CODE  		0xB6F0 0x510 : image ,adhereto VIRTUAL_SPACE;
+			
+			ANSWER_LOGIC_NORMAL_CODE    		0xB6F0 0x130 : image ,adhereto VIRTUAL_SPACE;
+			ANSWER_LOGIC_SORT_CODE				0xB820 0x3E0 : image ,adhereto VIRTUAL_SPACE;
+			ANSWER_LOGIC_COMBINE_CODE			0xB820 0x3E0 : image ,adhereto VIRTUAL_SPACE;
+			ANSWER_LOGIC_CONNECT01_CODE			0xB820 0x3E0 : image ,adhereto VIRTUAL_SPACE;
+			ANSWER_LOGIC_CONNECT02_CODE			0xB820 0x3E0 : image ,adhereto VIRTUAL_SPACE;
+			//==============================================================================
+			//REMOTE_TASK_CODE					0x9E70 0xA50 : image ,adhereto VIRTUAL_SPACE;	//0xA870
+			
+			//REMOTE_AP4_CODE			 			0xA8C0 0x1290 : image ,adhereto VIRTUAL_SPACE ;//
+
+    		//REMOTE_CACU_CODE		 			0xA8C0 0x1620 : image ,adhereto VIRTUAL_SPACE ;	
+    		
+			//REMOTE_PLAY_CODE		 			0xBEE0 0x1110 : image ,adhereto VIRTUAL_SPACE;
+			//REMOTE_CALBACK_CODE		 			0xBEE0 0x1110 : image ,adhereto VIRTUAL_SPACE;
+
+			REMOTE_TASK_CODE					0x9E70 0xAB0 : image ,adhereto VIRTUAL_SPACE;	//0xA870
+			
+			REMOTE_AP4_CODE			 			0xA920 0x12E0 : image ,adhereto VIRTUAL_SPACE ;//
+
+    		REMOTE_CACU_CODE		 			0xA920 0x18A0 : image ,adhereto VIRTUAL_SPACE ;	
+    		
+			REMOTE_PLAY_CODE		 			0xC1C0 0xE40 : image ,adhereto VIRTUAL_SPACE;
+			REMOTE_CALBACK_CODE		 			0xC1C0 0x100 : image ,adhereto VIRTUAL_SPACE;
+			REMOTE_CALBACK01_CODE				0xC2C0 0xD40 : image ,adhereto VIRTUAL_SPACE;
+			REMOTE_CALBACK02_CODE				0xC2C0 0xD40 : image ,adhereto VIRTUAL_SPACE;
+			CAL_DOWITH_01_CODE					0xC2C0 0xD40 : image ,adhereto VIRTUAL_SPACE;
+			CAL_DOWITH_02_CODE					0xC2C0 0xD40 : image ,adhereto VIRTUAL_SPACE;
+			//============MP3 API USE============
+			
+
+			KBFAT_CODE       	0x9E70 0x2390 : image ,adhereto VIRTUAL_SPACE;
+   	//============================================================================				
+			MP3_COMMON_CODE 0x9E70 0x990 : image ,adhereto VIRTUAL_SPACE;
+			//KB_RESIZE_CODE	0x9E70 0x990 : image ,adhereto VIRTUAL_SPACE;
+			
+			
+	
+    //===================gary repair=========================================
+		
+		FILE_EXTERN_CODE       0xA800 0x1400 : image ,adhereto VIRTUAL_SPACE;
+		FS_CREATE_BUF_CODE     0xA800 0x1400 : image ,adhereto VIRTUAL_SPACE;
+		//----------------------------------------------------------------------
+		MP3_API_CODE         0xA800 0x9C0 : image,adhereto VIRTUAL_SPACE;//M(MOVE)
+			MP3_FPREAD_CODE = MP3_API_CODE;
+		//MP3_TEMP_CODE(00 04) 0xA800 0x00 : image ,adhereto VIRTUAL_SPACE;
+		FILESEARCH_CODE		   0xB1C0 0x740 : image ,adhereto VIRTUAL_SPACE;
+		MP3_TMP_CODE(0 5)      0xB1C0 0x740  : image,adhereto VIRTUAL_SPACE;//M(MOVE)
+		
+		//KB_RESIZE_CODE		  0xA800 0x1100 : image ,adhereto VIRTUAL_SPACE;
+		//RP_CREATE_DIR01_CODE  0xA800 0x1100 : image ,adhereto VIRTUAL_SPACE;
+		//RP_CREATE_DIR02_CODE  0xA800 0x1100 : image ,adhereto VIRTUAL_SPACE;
+		//ADPCM_CREATE_CODE	  0xA800 0x1100 : image ,adhereto VIRTUAL_SPACE;
+		KB_RESIZE_CODE		  0xA800 0xA80 : image ,adhereto VIRTUAL_SPACE;
+		RP_CREATE_DIR01_CODE  0xA800 0xA80 : image ,adhereto VIRTUAL_SPACE;
+		RP_CREATE_DIR02_CODE  0xA800 0xA80 : image ,adhereto VIRTUAL_SPACE;
+		ADPCM_CREATE_CODE	  0xA800 0xA80 : image ,adhereto VIRTUAL_SPACE;
+		WAV_REC_PLAY_CODE	  0xB280 0x680 : image ,adhereto VIRTUAL_SPACE;
+//=============================================================================
+			IMA_Table = WAV_REC_PLAY_CODE;
+     		IMA_Encode_Code = WAV_REC_PLAY_CODE;
+     		IMA_Decode_Code = WAV_REC_PLAY_CODE;
+
+//==============================================================================		
+
+		DAC_TEMP_CODE(00 02) 		0xB900 0x300  : image ,adhereto VIRTUAL_SPACE;
+		AUADC_TEMP_CODE(0 1) 		0xB900 0x300 : image ,adhereto VIRTUAL_SPACE ;
+
+		SEARCH_TWOBYTE_CODE	 		0xB900 0x300 : image ,adhereto VIRTUAL_SPACE ;
+		
+		LINK_FILENAME_CODE	 		0xB900 0x800 : image ,adhereto VIRTUAL_SPACE ;
+		//READ_ALL_NEWS_CODE	 		0xB900 0x300  : image ,adhereto VIRTUAL_SPACE;
+		READ_BOOK_NEWS_CODE	 		0xB900 0x300  : image ,adhereto VIRTUAL_SPACE;
+		READ_PAGE_NEWS_CODE	 		0xB900 0x300  : image ,adhereto VIRTUAL_SPACE;
+		READ_PAGE_OTHERCODE	 		0xB900 0x300  : image ,adhereto VIRTUAL_SPACE;
+		
+		//MAKE_SD_DIR_CODE		 	0xB900 0x300  : image ,adhereto VIRTUAL_SPACE;
+		
+	 //===================================
+		  READ_ALL_NEWS_CODE	 		0xB900 0x820  : image ,adhereto VIRTUAL_SPACE;
+		
+		  
+	//========================================================================
+	DAC_COMMON_CODE      		0xBC00 0x520  : image ,adhereto VIRTUAL_SPACE ;
+    AUADC_COMMON_CODE    		0xBC00 0x520 : image ,adhereto VIRTUAL_SPACE ;	
+    
+    PLAY_AP3DEAL_CODE	 		0xBC00 0x520 : image ,adhereto VIRTUAL_SPACE ;	
+    ACT_READ_CODE		 		0xBC00 0x520 : image ,adhereto VIRTUAL_SPACE ;	
+    VOICE_PLAY_CODE		 		0xBC00 0x520 : image ,adhereto VIRTUAL_SPACE ;	
+    ACTSELECT_CODE				0xBC00 0x520 : image ,adhereto VIRTUAL_SPACE ;	
+    		
+    FAT_TEMP_CODE(00 19) 		0xC120 0xEE0  : image,adhereto VIRTUAL_SPACE;
+    SYSTEM_TIMER3_INIT_CODE		0xC120 0xEE0  : image,adhereto VIRTUAL_SPACE;
+    INIT_OID_CODE		 		0xC120 0xEE0  : image,adhereto VIRTUAL_SPACE;
+    GET_AP4NAME_CODE			0xC120 0xEE0  : image,adhereto VIRTUAL_SPACE;
+    ENCRY_NEWS_CODE				0xC120 0xEE0  : image,adhereto VIRTUAL_SPACE;
+    PRINT_NEWS_AP4_CODE			0xC120 0xEE0  : image,adhereto VIRTUAL_SPACE;
+    CLEANSTRUCT_CODE			0xC120 0xEE0  : image,adhereto VIRTUAL_SPACE;
+	}
+	
+
+	EXTMEM3 0x500000 0x100000 : ws 3
+	{
+		VIRTUAL_SPACE 0x0 0x100000 : image;
+	}
+}

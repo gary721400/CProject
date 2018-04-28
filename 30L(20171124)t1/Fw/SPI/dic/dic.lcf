@@ -1,0 +1,195 @@
+space
+{
+	XRAM 0x0 0x7000
+	{
+				SPACE_XRAM 0x0 0x7000 : stack 0x0 0xA00 ; 
+		MP3_CACHE_XRAM = SPACE_XRAM;
+			FILESEARCH_DATA = SPACE_XRAM;
+		MP3_LDB_XRAM     = SPACE_XRAM;
+		MP3_RDB_XRAM     = SPACE_XRAM;
+		
+		  AP4_MAIN_DATA = SPACE_XRAM;
+			FILE_DATA = SPACE_XRAM;
+			FILE_AUX_DATA = SPACE_XRAM;
+			FS_PATCH_DATA = SPACE_XRAM;
+			FS_VAR_DATA = SPACE_XRAM;
+			KEYPAD_DATA = SPACE_XRAM;
+			KEYPAD_DRV_DATA = SPACE_XRAM;
+			DIC_KERNEL_DATA = SPACE_XRAM;
+			DIC_AP3_DATA = SPACE_XRAM;
+			OID_DATA = SPACE_XRAM;
+			PLAYER_AP3_DATA = SPACE_XRAM;
+			PLAYER_TASK_DATA = SPACE_XRAM;
+			POWER_DATA = SPACE_XRAM;
+			SCHEDULER_DATA = SPACE_XRAM;
+			DIC_SEARCH_DATA = SPACE_XRAM;
+			SEARCH_GAME_DATA = SPACE_XRAM;
+			DIC_REMOTE_DATA = SPACE_XRAM;
+			SEARCH_TASK_DATA = SPACE_XRAM;
+			STRING_1_DATA = SPACE_XRAM;
+			TIMER_DRV_DATA = SPACE_XRAM;
+			UNICODE_DATA = SPACE_XRAM;
+			UNICODE_STRING_DATA = SPACE_XRAM;
+			
+			FSD2_DRIVER_DATA  = SPACE_XRAM;
+			FSD1_DRIVER_DATA  = SPACE_XRAM;
+		
+			SDTL_XRAM = SPACE_XRAM;
+			FSSD_DRIVER_DATA = SPACE_XRAM;
+			FS_DATA = SPACE_XRAM;
+			SPIF_XRAM = SPACE_XRAM;
+			FAT_DATA = SPACE_XRAM;
+			MP3_API_XRAM = SPACE_XRAM;
+			BITSTREAM_BUF_CIRC_XRAM = SPACE_XRAM;
+			DAC_XRAM = SPACE_XRAM;
+		  CATCH_BUF_CIRC_XRAM     = SPACE_XRAM;
+		  ADC_MAIN_DATA	 		= SPACE_XRAM;
+		  READ_OID_SOUND_DATA = SPACE_XRAM;
+		  WAV_REC_DATA = SPACE_XRAM;
+		  ADPCM_XRAM = SPACE_XRAM;
+		  AUADC_XRAM = SPACE_XRAM;
+		  RP_RECORD_DATA = SPACE_XRAM;
+		  ADPCM_RECORD_DATA = SPACE_XRAM;
+		  AGC_XRAM = SPACE_XRAM;
+		  SYSTEM_DATA = SPACE_XRAM;
+//		  STRCAST_DATA = SPACE_XRAM;
+	}
+	YRAM 0x8000 0x3000
+	{
+		SPACE_YRAM 0x0 0x3000;
+		MP3_LDB_YRAM     = SPACE_YRAM;
+		LCM_DRIVER_XYRAM = SPACE_YRAM;
+		MP3_API_XYAM     = SPACE_YRAM;
+	}
+	SFR 0xF100 0xF00
+	{
+		SPACE_SFR 0x0 0xF00 ;
+	}
+	DPRAM 0xF200 0xA
+	{
+		SPACE_DPRAM 0x0 0xA ;
+		
+		DAC_DPRAM = SPACE_DPRAM;
+		AUADC_DPRAM = SPACE_DPRAM;
+	}
+	IROM 0x30000 0x10000
+	{
+		SPACE_ROM 0x0 0x10000 ;
+	}
+	IRAM 0x10000 0xD000
+	{
+		SPACE_IRAM 0x0 0xA700 : interrupt 0x0 0x100 ,image ; 
+		
+
+
+		  KBDMCC = SPACE_IRAM;
+			DIC_MAIN_CODE = SPACE_IRAM;
+			UART_CODE = SPACE_IRAM;
+			FILE_CODE = SPACE_IRAM;
+	
+
+			KEYPAD_CODE = SPACE_IRAM;
+			KEYPAD_DRV_CODE = SPACE_IRAM;
+
+			DIC_KERNEL_CODE = SPACE_IRAM;
+
+			OID_CODE = SPACE_IRAM;
+			POWER_CODE = SPACE_IRAM;
+			DIC_SEARCH_CODE = SPACE_IRAM;
+			DIC_REMOTE_CODE = SPACE_IRAM;
+			//TIMER_DRV_CODE = SPACE_IRAM;
+			//UNI_STRING_CODE = SPACE_IRAM;
+			FILESEARCH_CODE = SPACE_IRAM;
+			ADC_MAIN_CODE   = SPACE_IRAM;
+			//FILE_AUX_CODE = SPACE_IRAM;
+
+   			LIBC = SPACE_IRAM;
+
+			
+				SYSDRV_CODE = SPACE_IRAM;
+				SDTL_CODE = SPACE_IRAM;
+				
+				
+
+				DIC_AP3_CODE	= SPACE_IRAM;
+				//USBDET_CODE = SPACE_IRAM;
+				SPIF_CODE = SPACE_IRAM;
+				
+				SYSTEM_CODE = SPACE_IRAM;
+				BATTERY_CODE = SPACE_IRAM;
+				
+				FAT_COMMON_CODE = SPACE_IRAM;
+				//MP3_COMMON_CODE = SPACE_IRAM;
+				FILE_EXTERN_CODE = SPACE_IRAM;
+
+		//FILE_EXTERN_CODE       0xA800 0x1400 : image ,adhereto VIRTUAL_SPACE;
+		
+				
+	     IMA_Table = SPACE_IRAM;
+	     IMA_Encode_Code = SPACE_IRAM;
+	     IMA_Decode_Code = SPACE_IRAM;
+	     //DAC_COMMON_CODE = SPACE_IRAM;
+
+		INIT_OID_CODE	= SPACE_IRAM;
+		//READ_OID_SOUND_CODE	0xA800 0x400  : image,adhereto VIRTUAL_SPACE;//M(MOVE)
+		MP3_COMMON_CODE 0xA700 0x100 : image ,adhereto VIRTUAL_SPACE;
+		//===================================
+		MP3_API_CODE         0xA800 0x9C0 : image,adhereto VIRTUAL_SPACE;//M(MOVE)
+		//DAC_COMMON_CODE = MP3_API_CODE;
+		MP3_FPREAD_CODE = MP3_API_CODE;
+		
+		//===================gary repair=========================================
+		
+			
+			
+			//============MP3 API USE============
+		 
+			
+//     IMA_Table = IMA_CODEC_CODE;
+//     IMA_Encode_Code = IMA_CODEC_CODE;
+//     IMA_Decode_Code = IMA_CODEC_CODE;				
+	
+		//===================gary repair=========================================
+		
+		//FILE_EXTERN_CODE     0xA800 0x1400 : image ,adhereto VIRTUAL_SPACE;
+		//FS_CREATE_BUF_CODE     0xB1C0 0xF40 : image ,adhereto VIRTUAL_SPACE;
+
+		//----------------------------------------------------------------------
+
+    
+    
+		MP3_TMP_CODE(0 5)    0xB1C0 0x740  : image,adhereto VIRTUAL_SPACE;//M(MOVE)
+//		MP3_TEMP_CODE(00 04) 0xAD00 0x1100 : image ,adhereto VIRTUAL_SPACE;
+//		WAV_REC_CODE         0xA800 0x1100 : image ,adhereto VIRTUAL_SPACE ;
+//		WAV_PLAY_CODE         0xA800 0x1100 : image ,adhereto VIRTUAL_SPACE ;
+
+
+
+
+		DAC_TEMP_CODE(00 02) 0xB900 0x300  : image ,adhereto VIRTUAL_SPACE;
+		AUADC_TEMP_CODE(0 1) 0xB900 0x300 : image ,adhereto VIRTUAL_SPACE ;
+		//DIC_LINK_TISHI_CODE   0xB900 0x300  : image ,adhereto VIRTUAL_SPACE;
+
+		//=================================================================
+		FIND_PASS_01_CODE					0xB900 0x300 : image ,adhereto VIRTUAL_SPACE;
+		FIND_PASS_02_CODE					0xB900 0x300 : image ,adhereto VIRTUAL_SPACE;
+ 		//-----------------------------------------------------------------------------
+		DAC_COMMON_CODE      		0xBC00 	0x520  : image ,adhereto VIRTUAL_SPACE ;
+    	AUADC_COMMON_CODE    		0xBC00 	0x520 : image ,adhereto VIRTUAL_SPACE ;
+    	FIND_PASS_03_CODE    		0xBC00	0x520 : image,adhereto VIRTUAL_SPACE;//M(MOVE)
+		JIAMI_CODE					0xBC00	0x520 : image,adhereto VIRTUAL_SPACE;//M(MOVE)
+	 //===================================
+		  FAT_TEMP_CODE(00 19) 		0xC120 0xEE0  : image,adhereto VIRTUAL_SPACE;
+		  SYSTEM_TIMER3_INIT_CODE	0xC120 0xEE0  : image,adhereto VIRTUAL_SPACE;
+		  DIC_LINK_TISHI_CODE   	0xC120 0xEE0  : image ,adhereto VIRTUAL_SPACE;
+	//========================================================================
+		
+		//READ_OID_SOUND_CODE	0xC120 0xEE0  : image,adhereto VIRTUAL_SPACE;//M(MOVE)
+
+	}
+	
+	EXTMEM3 0x500000 0x100000 : ws 3
+	{
+		VIRTUAL_SPACE 0x0 0x100000 : image;
+	}
+}
