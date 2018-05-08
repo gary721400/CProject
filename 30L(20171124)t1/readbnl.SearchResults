@@ -1,7 +1,0 @@
----- g_string2 Matches (6 in 3 files) ----
-GlobalVariable.c (fw\library):unsigned int g_string2[30] @ 0x501c;  //0x681c--6858
-GlobalVariable.c (fw\library):unsigned int g_string2[30] @ 0x6F74;  //0x681c--6858
-GlobalVariable.c (fw\library):unsigned int g_string2[30] @ 0x6830;  //0x681c--6858
-GlobalVariable.h (fw\library):extern unsigned int g_string2[30];  //0x681c--6858
-Main.c (fw\readbnl):	ustr = (U16 *)g_string2;
-Main.c (fw\readbnl):	return	(U16 *)g_string2;

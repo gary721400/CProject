@@ -1,2 +1,0 @@
----- 笔中无本书内容 Matches (1 in 1 files) ----
-Mmi_idle.c (fw\mmi\idle):        lcd_puts((U8 *)"笔中无本书内容");

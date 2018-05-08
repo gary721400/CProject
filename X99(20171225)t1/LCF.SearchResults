@@ -1,3 +1,0 @@
----- BROWER_GO_PAGE_CODE Matches (2 in 2 files) ----
-Ap4.lcf (kb952\ap4\ap4):		BROWER_GO_PAGE_CODE					  0x8D00 0x0180 : image ,adhereto VIRTUAL_SPACE;//单元选定,准备进入对应单元的第一页
-Study.lcf (kb952\study\study):		BROWER_GO_PAGE_CODE					  0x8D00 0x0180 : image ,adhereto VIRTUAL_SPACE;//单元选定,准备进入对应单元的第一页

@@ -1,5 +1,0 @@
----- SD_DEVICE Matches (4 in 1 files) ----
-Example_ADPCM_Record.c (fw\record\record_to_adpcm):#define SD_DEVICE   "0:\\REC\\"
-Example_ADPCM_Record.c (fw\record\record_to_adpcm):		 strcpy(dir_path,SD_DEVICE);
-Example_ADPCM_Record.c (fw\record\record_to_adpcm):			strcpy(path,SD_DEVICE);
-Example_ADPCM_Record.c (fw\record\record_to_adpcm):		strcpy(path,SD_DEVICE);

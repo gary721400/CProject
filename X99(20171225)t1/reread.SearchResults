@@ -1,6 +1,0 @@
----- REREAD_MODE Matches (5 in 3 files) ----
-Conf_sio.h (fw\conf)://#define				REREAD_MODE             				( DISABLE )
-Conf_sio.h (fw\conf):#define 			REREAD_MODE             				( ENABLE )
-Recorder_oid.c (kb952\reread\reread\fw\drivers\oid):#if 0//(REREAD_MODE == ENABLE)
-Recorder_player_task.c (kb952\reread\reread\fw\modules\player):#if (REREAD_MODE == ENABLE)   
-Recorder_player_task.c (kb952\reread\reread\fw\modules\player):#endif    //(REREAD_MODE == ENABLE)

@@ -1,5 +1,0 @@
----- t01_calib_data1 Matches (3 in 2 files) ----
-
-Variable.c (fw):U16             t01_calib_data1                        @ 0x6F3A;
-Variable.c (fw)://U32               t01_calib_data1                        @ 0x6F3A;
-Variable.h (fw):extern   U16             t01_calib_data1;
