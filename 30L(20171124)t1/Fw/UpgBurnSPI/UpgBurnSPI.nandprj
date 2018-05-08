@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<nandbuild>
-  <Setting StartSector="16" StartDataSector="1000" AutoDown="True" CompareBefore="False" LastID="0" BootCode="C:\Program Files\King Billion\KBDMIDS\ini\SPIBOOT_KBDM9\BOOT_CODE.bin" OutHeader="BinaryImage.h" ResvSize="1024" MaxBlank="10" CSSET="0" LastDataSector="1000"/>
-  <NandObjects>
-    <C_URN StartSector="4" SectorNum="29" Size="14564" ID="0" Type="True" Path="output\SPACE_IRAM.bin" AdditionPath="" AdditionNum="0" Name="C_URN" LoadAddr="65536" SingleData="False"/>
-  </NandObjects>
-</nandbuild>
